@@ -1,0 +1,565 @@
+@import url("https://use.typekit.net/gmz8bac.css");
+@import url("https://use.typekit.net/vjc2wbx.css");
+
+@font-face {
+    src: url("https://use.typekit.net/gmz8bac.css");
+    font-family: "regulator-nova", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    src: url("https://use.typekit.net/vjc2wbx.css");
+    font-family: "new-hero", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+*{
+  margin: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+.mobil{
+  display: none;
+}
+.laptop{
+  display: block;
+}
+h1{
+  font-family: "regulator-nova", sans-serif;
+  color: #DF601C;
+  font-size: 4vw;
+  line-height: 1.2;
+  font-weight: lighter;
+} 
+h2{
+  font-family: "regulator-nova", sans-serif;
+  color: black;
+  font-size: 2vw;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+p{
+  color: black;
+  font-family: "new-hero", sans-serif;
+  font-weight: lighter;
+  font-size: 1.7vw;
+  line-height: 1.5;
+}
+body{
+  background-color: #EFEBE7;
+}
+Link{
+  color: #000;
+  text-decoration: none;
+  font-family: "new-hero", sans-serif;
+}
+/*--------------navigation--------------------*/
+.navigation{
+  height: 70px;
+  background-color: #EFEBE7;
+  border-bottom: solid 1px #707070;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding-top: 8px;
+  top: 0; 
+  padding-left: 2vw;
+}
+#burger-menu{
+  display: none;
+}
+.navlink{
+  font-family: "new-hero", sans-serif;
+  color: #000;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 15pt;
+  padding-left: 6vw;
+  z-index: 1;
+}
+#om{
+  z-index: 10;
+}
+.navlink:hover{
+  color: #DF601C;
+  transition: 0.3s;
+}
+
+#menu{
+  width: 100%;
+}
+
+#logolink{
+  margin-top:1vh;
+  position: absolute;
+  left: 38vw;
+}
+#logo{
+  width: 20%;
+}
+#xul{
+  display: flex;
+  padding-top: 20px;
+  width: 100%;    
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+
+}
+.dropdown-content{
+  margin-top: 15%;
+  display:none;
+  color: black;
+  position: absolute;
+  height: fit-content;
+  z-index: 1;
+  min-width: 100vw;
+  background-color: #EFEBE7;
+  text-align: left;
+  font-size: 15px;
+  padding: 10px;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #707070;
+  margin-left: -2vw;
+  flex-direction: row; 
+}
+#produktDD{
+  margin-left: -10.2vw;
+  margin-top: 13%;
+}
+.dropdown:hover{
+  background-color: #EFEBE7;
+}
+.dropdown:hover .dropdown-content{
+  display: block flex;  
+}
+#Lkurv{
+  margin-left: 40%;
+  display: flex;
+}
+#kurvikon{
+  width: 25px;
+  margin-right: 2vw;
+  margin-top: -4px;
+}
+/*------------KompEt-------------------*/
+
+.fuld{
+  width: 100%;
+  height: 88vh;
+}
+.forside{
+  margin-top: 50px;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+}
+.F100{
+  font-size: 9vw;
+}
+.cirkelBag{
+  width: 35vw;
+  height: 35vw;
+  border: 1px solid #707070;
+  border-radius: 17.5vw;
+  margin-left: -19vw;
+  margin-top: 12vh;
+  z-index: 1;
+  padding-left: 20vw;
+  padding-top: 14vh;
+}
+.billede-cirkel{
+  width: 50%;
+  height: 90vh;
+  display: flex;
+}
+.Fbillede{
+  margin-top: 5%;
+  width: 30vw;
+  height: 80vh;
+  border-top: 1px solid #707070;
+  border-right: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  z-index: 2;
+}
+.carousel {
+  width: 96%;
+  height: 94%;
+  margin-top: 4%; /* Justér efter behov */
+  overflow: hidden;
+  position: relative;
+}
+.carousel-image1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Tilpas billedet, så det dækker hele containeren */
+}
+.LandingKarrusel{
+  width: 96%;
+  height: 94%;
+  margin-top: 4%;
+  object-fit: cover;
+}
+.WV{
+  margin-top: 10vh;
+  text-align: center;
+}
+/*-----------Bjælke--------------*/
+.bjaelke{
+  width: 100%;
+  height: fit-content;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  background-color: #C8B59B;
+  text-align: center;
+  border-bottom: 1px solid #707070;
+}
+/*---------PAgES---------*/
+/*--------forside--------*/
+.knapDiv3{
+  width: 100;
+  height: 7vh;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  display: flex;
+  justify-content: space-evenly;
+}
+.knapKasse{
+  width: 33%;
+  height: 100%;
+  padding-top: 2vh;
+  display: flex;
+  justify-content: center;
+}
+.KnapMidt{
+  border-left: 1px solid #707070;
+  border-right: 1px solid #707070;
+}
+.OvalKnap{
+  width: 10vw;
+  height: 3vh;
+  text-align: center;
+  padding-top: 0.5%;
+  border: 1px solid #707070;
+  border-radius: 1vw;
+  color: #000;
+  text-decoration: none;
+  font-family: "new-hero", sans-serif;
+}
+.OvalKnap:hover{
+  background-color: #EAD9DB;
+  transition: ease-in 0.3s;
+}
+
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.image-container {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+  justify-content: space-evenly;
+}
+
+.carousel-image {
+  width: 25vw;
+  height: 75vh;
+  object-fit: cover;
+}
+.carousel-image:hover{
+  filter: sepia(30%);
+}
+.carousel-indicators{
+  margin-bottom: 10vh;
+}
+
+
+@media only screen and (max-width: 1000px){
+  .mobil{
+      display: block;
+  }
+  .laptop{
+      display: none;
+  }
+  h1{
+      font-size: 10vw;
+  }
+  p{
+      font-size: 5vw;
+  }
+  h2{
+    font-size: 6vw;
+  }
+  /*-------------burger---------------*/
+  .navlink{
+      font-size: 9vw;
+      border-top: #707070 1px solid;
+      display: flex;
+      padding-top: 3vh;
+      padding-bottom: 3vh;
+  }
+  .navigation{
+    padding-left: 0vw;
+    border-bottom: none;
+    background-color: unset;
+  }
+  #burger-menu{
+      display: block;
+  }
+  #burger-menu span{
+      margin-top: 20px;
+      margin-right: 20px;
+  }
+  #burger-menu span,
+  #burger-menu span::before,
+  #burger-menu span::after {
+      background: #000;
+      display: block;
+      height: 3px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+  }
+  #burger-menu span:before,
+  #burger-menu span:after {
+          content: "";
+  }
+  #burger-menu span:before {
+      left: 0px;
+      top: -10px;
+      width: 27px;
+  }
+  #burger-menu span {
+      right: 0px;
+      top: 13px;
+      width: 27px;
+  }
+  #burger-menu span:after {
+      left: 0px;
+      top: 10px;
+      width: 27px;
+  }
+  #burger-menu.close span:before {
+      top: 0px;
+      transform: rotate(90deg);
+      width: 27px;
+  }
+  #burger-menu.close span {
+      transform: rotate(-45deg);
+      top: 13px;
+      width: 27px;
+  }
+  #burger-menu.close span:after {
+      top: 0px;
+      left: 0;
+      transform: rotate(90deg);
+      opacity: 0;
+      width: 0;
+  }
+  #Mlogo{
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 10px;
+  }
+  #logolink{
+    display: none;
+  }
+  #Mlogolink{
+    border-top: none;
+  }
+
+  #menu {
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100vh;
+      position: fixed;
+      top: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+  }
+  #menu.overlay {
+      visibility: visible;
+      opacity: 1;
+      margin-top: 50px;
+      background-color: #EFEBE7;
+  }
+  #xul {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 70vh;
+      margin-top: 20px;
+      text-align: left;
+      padding-top: 5vh;
+  }
+  /* Stil dropdown-containeren */
+
+
+.dropdown-content {
+  display: none; 
+  flex-direction: column; 
+  position: relative; 
+  width: 100%;
+  margin-top: -3vh;
+  border-bottom: none;
+}
+.dropdown-content .navlink{
+  font-size: 10vw;
+  padding-left: 10vw;
+
+}
+
+  #kurv{
+    margin-left: 0%;
+  }
+  .Mcirkel{
+    width: 7vw;
+    height: 7vw;
+    border: solid 1px #707070;
+    border-radius: 3.5vw;
+    margin-right: 2vw;
+
+  }
+  .dropdown-content .navlink{
+      font-size: 15pt;
+  }
+  #kurvtekst{
+    display: none;
+  }
+  #kurvikon{
+    position: absolute;
+    margin-left: -40%;
+    margin-top: -3vh;
+  }
+  #Lkurv{
+    border-top: none;
+  }
+
+  /*------------KompEt------------*/
+  .forside{
+    flex-direction: column-reverse;
+    margin-top: 20vh;
+  }
+  .F100{
+    font-size: 17vw;
+  }
+  .fuld{
+    height: 75.1vh;
+  }
+  .billede-cirkel{
+    width: 100%;
+  }
+  .Fbillede{
+    width: 60vw;
+    height: 60vh;
+    margin-top: 5vh;
+  }
+  .cirkelBag{
+    width: 90vw;
+    height: 90vw;
+    border-radius: 45vw;
+    margin-left: -60vw;
+    padding-left: 62vw;
+    padding-top: 10vh;
+  }
+  /*-----------Bjælke---------------*/
+  .forside1h2{
+    font-size: 4.5vw;
+  }
+  /*-------------Pages--------------*/
+  /*--------forside------------*/
+  .knapDiv3{
+    height: 5vh;
+  }
+  .knapKasse{
+    padding-top: 1vh;
+  }
+  .OvalKnap{
+    width: 27vw;
+    border-radius: 4vw;
+  }
+
+
+  .carousel-container {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+  }
+  
+  .carousel-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .image-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300vw; /* 3 billeder à 100vw */
+    gap: 20vw;
+    margin-left: 10VW;
+  }
+  
+  .carousel-image {
+    width: 80vw;
+    flex-shrink: 0;
+    height: auto;
+  }
+  
+  .arrow {
+    cursor: pointer;
+    width: 6vw;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .left {
+    left: 10px;
+  }
+  
+  .right {
+    right: 10px;
+  }
+  
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-indicator.active {
+    background-color: #707070;
+  }
+}
