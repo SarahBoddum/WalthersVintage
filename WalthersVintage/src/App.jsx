@@ -31,8 +31,8 @@ function App() {
         <Route path="/stitchstories" element={<StitchStoriesPage/>} />
         <Route path="/vintage" element={<VintagePage/>} />
         <Route path="/upcycled" element={<UpcycledPage/>} />
-        <Route path="/størrelsesguide" element={<StrGuidePage/>} />
-        <Route path="/baredygtighed" element={<BaredygtigPage/>} />
+        <Route path="/strguide" element={<StrGuidePage/>} />
+        <Route path="/baredygtig" element={<BaredygtigPage/>} />
         <Route path="/kurv" element={<KurvPage/>} />
         <Route path="*" element={<Navigate to="/"/>} />
      </Routes>

@@ -1,0 +1,14 @@
+{
+    "produktkort": [
+        {
+            "overskift": "Vintage jakke",
+            "billede": "",
+            "pris": 123.00
+        },
+        {
+            "overskift": "Vintage skjorte",
+            "billede": "/Users/sarahboddum/Desktop/WalthersVintage/WalthersVintage/src/assets/Images",
+            "pris": 123.00
+        }
+    ]
+}

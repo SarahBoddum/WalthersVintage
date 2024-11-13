@@ -8,6 +8,9 @@ import image3 from '../assets/Images/Qkjole3.webp';
 import pilVenstre from '../assets/Images/pilV.png';
 import pilHøjre from '../assets/Images/pilH.png';
 import BeigeTxtPic from '../components/BeigeTxtPic';
+import Lis1 from '../assets/Images/placeholder1.png';
+import Testimonial from '../components/Testimonial';
+import testiPic from '../assets/Images/Qhvid2-lys.jpg'
 
 export const Forside = () => {
   const images = [
@@ -83,14 +86,28 @@ export const Forside = () => {
             ></div>
           ))}
         </div>
-        <Bjaelke>
+      </div>
+      <Bjaelke>
           <h2>embrace slow</h2>
       </Bjaelke>
-      </div>
 
-      <BeigeTxtPic>
-            <h3>Brand filosofi</h3>
+      <BeigeTxtPic
+      MidtContent={<p>Walthers Vintage er fashion og vintage i et roligt og imødekommende univers. Alt er håndvalgt, håndsyet og særligt udvalgt, så du nemt kan finde det unikke piece, du mangler. 
+        <br /><br />
+        Alt i butikken er valgt og lavet med respekt for den verden vi lever i og de ressourcer, vi forbruger. </p>}
+        KnapLink={<p className='paddingTop'>Læs mere</p>}
+        OvalImg={Lis1}>
+        {<h3>Brand filosofi</h3>}   
       </BeigeTxtPic>
+
+      <Testimonial
+      buePic={testiPic}
+      TestiH2={<h2>testimonial</h2>}
+      TopContent={<h2>Anna, kunde</h2>}
+      BundContent={<p>Købt online</p>}
+      TestiContent={<p>Når jeg kommer ind til dig, så ved jeg at det er god stil. Så har du været på jagt iblandt utallige bøjler med grimme ting og udvalgt alle skattene. Hvis jeg selv skulle på jagt, ville jeg ikke vide om den var cool or not når den hang imellem alle de andre un cool ting. Men når du har valgt den, så er jeg sikker på at den er cool</p>}>
+
+      </Testimonial>
       
     </div>
   );
