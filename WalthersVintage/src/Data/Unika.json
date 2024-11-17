@@ -1,0 +1,22 @@
+{
+    "unika": [
+        {
+            "id": "unika-1",
+            "overskrift": "Kjole no. 1",
+            "stortbillede": "/src/assets/Images/Rjakke1.webp",
+            "lillebillede": "/src/assets/Images/Rjakke1.webp",
+            "produktbeskrivelse": "",
+            "underoverskrift": "Produktbeskrivelse"
+        },
+        {   
+            "id": "vintage-2",
+            "overskrift": "Vintage skjorte",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "2,36 kr",
+            "brystmål": 84,
+            "taljemål": 68,
+            "hoftemål": 92,
+            "type": "overdel"
+        }
+    ]
+}

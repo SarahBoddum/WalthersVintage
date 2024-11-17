@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const BeigeTxtPic = (props) => {
     const content = props.children;
-    const {OvalImg, altTag, MidtContent, KnapLink } = props; 
+    const {OvalImg, altTag, MidtContent, KnapLink, MCImg, MCImgAlt, OvalImgcN } = props; 
 
   return (
     <div className='BaggSand'>
@@ -17,6 +17,7 @@ export const BeigeTxtPic = (props) => {
                 </div>
                 <div className='TextMidt'>
                     {MidtContent}
+                    <img src={MCImg} alt={MCImgAlt} id='MCImg'/>
                 </div>
                 <div className='Txt2lodret'>
                     <div className='Lodrethøjre'>
@@ -25,7 +26,7 @@ export const BeigeTxtPic = (props) => {
                 </div>
             </div>
             <div className='OvalPic'>
-                <img src={OvalImg} alt={altTag} className='OvalImg' loading="lazy"/>
+                <img src={OvalImg} alt={altTag} className={`OvalImg ${OvalImgcN}`} loading="lazy"/>
             </div>
         </div>
         <div className='knapDiv3 beige'>

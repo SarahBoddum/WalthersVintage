@@ -1,14 +1,104 @@
 {
     "produktkort": [
         {
-            "overskift": "Vintage jakke",
-            "billede": "",
-            "pris": 123.00
+            "id": "vintage-1",
+            "overskrift": "Vintage jakke",
+            "billede": "/src/assets/Images/Rjakke1.webp",
+            "pris": "1,34 kr",
+            "brystmål": 80,
+            "taljemål": 64,
+            "hoftemål": 88,
+            "type": "jakker"
         },
-        {
-            "overskift": "Vintage skjorte",
-            "billede": "/Users/sarahboddum/Desktop/WalthersVintage/WalthersVintage/src/assets/Images",
-            "pris": 123.00
+        {   
+            "id": "vintage-2",
+            "overskrift": "Vintage skjorte",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "2,36 kr",
+            "brystmål": 84,
+            "taljemål": 68,
+            "hoftemål": 92,
+            "type": "overdele"
+        },
+        {   
+            "id": "vintage-3",
+            "overskrift": "Vintage kjole",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "3,38 kr",
+            "brystmål": 88,
+            "taljemål": 72,
+            "hoftemål": 96,
+            "type": "kjole/nederdele"
+        },
+        {   
+            "id": "vintage-4",
+            "overskrift": "Vintage nederdel",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "4,36 kr",
+            "brystmål": 84,
+            "taljemål": 68,
+            "hoftemål": 92,
+            "type": "kjole/nederdele"
+        },
+        {   
+            "id": "vintage-5",
+            "overskrift": "Vintage bukser",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "5,34 kr",
+            "brystmål": 80,
+            "taljemål": 64,
+            "hoftemål": 88,
+            "type": "bukser"
+        },
+        {   
+            "id": "vintage-6",
+            "overskrift": "Vintage skjorte",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "6,40 kr",
+            "brystmål": 92,
+            "taljemål": 76,
+            "hoftemål": 100,
+            "type": "overdele"
+        },
+        {   
+            "id": "vintage-7",
+            "overskrift": "Vintage jakke",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "7,38 kr",
+            "brystmål": 88,
+            "taljemål": 72,
+            "hoftemål": 96,
+            "type": "jakker"
+        },
+        {   
+            "id": "vintage-8",
+            "overskrift": "Vintage jakke",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "8,34 kr",
+            "brystmål": 80,
+            "taljemål": 64,
+            "hoftemål": 88,
+            "type": "jakker"
+        },
+        {   
+            "id": "vintage-9",
+            "overskrift": "Vintage bukser",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "9,40 kr",
+            "brystmål": 92,
+            "taljemål": 76,
+            "hoftemål": 100,
+            "type": "bukser"
+        },
+        {   
+            "id": "vintage-10",
+            "overskrift": "Vintage skjorte",
+            "billede": "/src/assets/Images/Hand1.jpg",
+            "pris": "10,36 kr",
+            "brystmål": 84,
+            "taljemål": 68,
+            "hoftemål": 92,
+            "type": "overdele"
         }
     ]
 }

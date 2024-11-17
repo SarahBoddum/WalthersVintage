@@ -13,6 +13,7 @@ import VintagePage from './Pages/VintagePage'
 import UpcycledPage from './pages/UpcycledPage'
 import StrGuidePage from './pages/StrGuidePage';
 import KurvPage from './pages/KurvPage';
+import VintageProdukt from './pages/VintageProdukt';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/strguide" element={<StrGuidePage/>} />
         <Route path="/baredygtig" element={<BaredygtigPage/>} />
         <Route path="/kurv" element={<KurvPage/>} />
+        <Route path="/VintageProdukt" element={<VintageProdukt/>} />
         <Route path="*" element={<Navigate to="/"/>} />
      </Routes>
     </>
