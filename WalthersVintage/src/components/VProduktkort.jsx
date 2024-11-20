@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 export const VProduktkort = ({product}) => {
@@ -7,10 +8,13 @@ export const VProduktkort = ({product}) => {
     <div className='produktKort'>
         <h3>{product.overskrift}</h3>
         <div id='produktStreg'></div>
-        <img id='produktbillede' src={product.billede}/>
+        <Link to={`/produkt/${product.id}`} state={{ product }}>
+          <img id='produktbillede' src={product.billede}/>
+        </Link>
         <p>{product.pris}</p>
-        <button id='produktBtn'>Læs mere</button>
-    
+        <Link to={`/produkt/${product.id}`} state={{ product }}>
+          <button type='button' id='produktBtn'>Læs mere</button>
+        </Link>
     </div>
   )
 }

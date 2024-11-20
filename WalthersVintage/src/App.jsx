@@ -14,6 +14,7 @@ import UpcycledPage from './pages/UpcycledPage'
 import StrGuidePage from './pages/StrGuidePage';
 import KurvPage from './pages/KurvPage';
 import VintageProdukt from './pages/VintageProdukt';
+import ProduktDetaljer from './Components/ProduktDetaljer';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/kurv" element={<KurvPage/>} />
         <Route path="/VintageProdukt" element={<VintageProdukt/>} />
         <Route path="*" element={<Navigate to="/"/>} />
+        <Route path="/produkt/:id" element={<ProduktDetaljer />} />
      </Routes>
     </>
   )

@@ -4,20 +4,23 @@ import filterdukke from '../assets/Images/måledukke3.svg'
 import { Link } from 'react-router-dom';
 import VProduktkort from '../components/VProduktkort';
 import produktdata from '../Data/ProduktKort.json';
+import pilVenstre from '../assets/Images/pilV.png'
 
 export const VintageProdukt = () => {
   const [products] = useState(produktdata.produktkort); // Brug produktdata.produktkort
   const [filter, setFilter] = useState({ brystmål: null, taljemål: null, hoftemål: null, type: [] });
   const [filterActivated, setFilterActivated] = useState(false);
-  console.log("Aktivt filter:", filter);
+  const [isFilterOpen, setIsFilterOpen] = useState(true);
 
   const filterProducts = () => {
+
+    
     if (!filterActivated) return products;
 
-    // 1. Filtrér baseret på type
+  
     const typeFilteredProducts = products.filter((product) => {
-      if (filter.type.length === 0) return true; // Hvis ingen type er valgt, vis alt
-      return filter.type.some((type) => product.type === type); // Filtrér baseret på valgt type
+      if (filter.type.length === 0) return true; 
+      return filter.type.some((type) => product.type === type); 
     });
 
     // 2. Filtrér de allerede typefiltrerede produkter baseret på størrelser
@@ -63,18 +66,27 @@ export const VintageProdukt = () => {
     setFilter({ ...filter, type: selectedTypes });
   };
 
+  const toggleFilter = () => {
+    setIsFilterOpen(!isFilterOpen);
+  };
+
   const filteredProducts = filterProducts();
 
   return (
     <div>
-      <Link id='filtreÅben' to="/vintage#filtre">
-        <h2>luk filtre</h2>
-      </Link>
+      <div id='filtreÅben'>
+        <Link id='filterVenstre' to="/vintage">
+          <img src={pilVenstre} alt='pil til venstre ikon' className='filterpil'/>
+          <p>Tilbage</p>
+        </Link>
+        <h2 id='linkH2' onClick={toggleFilter}>{isFilterOpen ? "Luk filtre" : "Åbn filtre"}</h2>
+      </div>
 
-      <div id='filterfunktion'>
+      {isFilterOpen && (
+      <div id='filterfunktion' className={isFilterOpen ? '' : 'collapsed'}>
         <Link id='filterTilbage' to="/strguide">
           <p>Størrelsesguide</p>
-          <img src={pilHøjre} id='filterpil' alt='pil mod højre ikon' />
+          <img src={pilHøjre} className='filterpil' alt='pil mod højre ikon' />
         </Link>
         <div id='målOgDukke'>
           <div id='filterMål'>
@@ -112,15 +124,14 @@ export const VintageProdukt = () => {
                 <button
                   type="button"
                   onClick={() => handleTypeFilterClick("kjole/nederdele")}
-                  className={filter.type.includes("kjole/nederdele") ? "active" : ""}
-                >
+                  className={filter.type.includes("kjole/nederdele") ? "active" : ""}>
                   Kjole/Nederdele
                 </button>
+
                 <button
                   type="button"
                   onClick={() => handleTypeFilterClick("overdele")}
-                  className={filter.type.includes("overdele") ? "active" : ""}
-                >
+                  className={filter.type.includes("overdele") ? "active" : ""}>
                   Overdele
                 </button>
               </div>
@@ -128,15 +139,14 @@ export const VintageProdukt = () => {
                 <button
                   type="button"
                   onClick={() => handleTypeFilterClick("jakker")}
-                  className={filter.type.includes("jakker") ? "active" : ""}
-                >
+                  className={filter.type.includes("jakker") ? "active" : ""}>
                   Jakker
                 </button>
+
                 <button
                   type="button"
                   onClick={() => handleTypeFilterClick("bukser")}
-                  className={filter.type.includes("bukser") ? "active" : ""}
-                >
+                  className={filter.type.includes("bukser") ? "active" : ""}>
                   Bukser
                 </button>
               </div>
@@ -155,7 +165,7 @@ export const VintageProdukt = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>)}
 
       <div className="filterAlle">
         {filteredProducts.map((product) => (

@@ -22,7 +22,7 @@ export const Vintage = () => {
         
         <h2>filter</h2>
       </Link>
-      <div className='filterAlle'>
+      <div className='filterAlle vintagePage'>
         <div className="produktFlex">
           {produktdata.produktkort.slice(0, 2).map((product) => (
             <VProduktkort key={product.id} product={product} />
@@ -34,7 +34,7 @@ export const Vintage = () => {
           <img src={vintageStatisk1} alt='Udsnit af mit tøj' className='SStemningsImg'/>
         </div>
       </div>
-      
+
     <div className="produktFlex">
         {produktdata.produktkort.slice(2, 4).map((product) => (
           <VProduktkort key={product.id} product={product} />

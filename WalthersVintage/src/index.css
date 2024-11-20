@@ -521,6 +521,65 @@ Link{
   background-color: #EAD9DB;
   transition: ease-in 0.3s;
 }
+/*---------ProduktDetaljer------*/
+#produktdetaljerTop{
+  width: 100vw;
+  height: 100vh;
+  padding-top: 70px;
+  display: flex;
+}
+#detaljeFlex{
+  display: flex;
+}
+.detaljebillede{
+  width: 30vw;
+  height: 60vh;
+  object-fit: cover;
+}
+#detaljeImgRamme{
+  width: 31.5vw;
+  height: 64vh;
+  border: #707070 solid 1px;
+  margin-left: -1px;
+  padding-top: 2vh;
+
+  z-index: 1;
+}
+.Detaljer-VH{
+  padding-top: 3vh;
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#detaljerCirkel{
+  width: 30vw;
+  height: 30vw;
+  border-radius: 20vw;
+  border: #707070 solid 1px;
+  margin-left: -20vw;
+  margin-top: 4.5vh;
+  padding-left: 21vw;
+  padding-top: 12vw;
+}
+#detaljeTxt{
+  width: 25vw;
+  height: fit-content;
+  margin: auto;
+  margin-top: 24vh;
+
+}
+.detaljeKD{
+  padding-top: 2vh;
+
+}
+#detaljeProduktkort{
+  width: 76vw;
+  margin: auto;
+  display: flex;
+  border-left: 1px solid #707070;
+}
 /*---------PAgES---------*/
 /*--------forside--------*/
 .knapDiv3{
@@ -722,11 +781,17 @@ Link{
   text-decoration: none;
   position: fixed;
 }
+#linkH2:hover{
+  color: #DF601C;
+  transition: 0.3s ease-in-out;
+}
 .filterAlle{
   width: 100vw;
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 19vh;
+  border-top: #707070 1px solid;
 }
 #vintageP{
   margin-top: 69px;
@@ -737,7 +802,7 @@ Link{
 }
 .styleBox button.active {
   text-decoration: underline;
-  color: #007bff;
+  color: #DF601C;
   font-weight: bold;
 }
 
@@ -754,6 +819,11 @@ Link{
   width: 100vw;
   height: fit-content;
   border-bottom: #707070 1px solid;
+  margin-top: 20vh;
+  transition: max-height 0.8s ease-in-out;
+}
+#filterfunktion.collapsed {
+  max-height: 0;
 }
 #filterTilbage{
   width: 100vw;
@@ -770,7 +840,7 @@ Link{
 #filterTilbage p{
   font-size: 1.5vw;
 }
-#filterpil{
+.filterpil{
   width: 40px;
   height: 20px;
   margin-left: 2vw;
@@ -899,6 +969,19 @@ Link{
   border: #707070 solid 1px;
   margin-left: 10vw;
   margin-top: 2vh;
+}
+#filterVenstre{
+  display: flex;
+  width: 10vw;
+  justify-content: space-between;
+  text-decoration: none;
+}
+#filterVenstre p:hover{
+  color: #DF601C;
+  transition: 0.3s ease-in-out;
+}
+#filterVenstre p{
+  padding-top: 0.5vh;
 }
 /*------------faq-------------------*/
 #faqDiv{
@@ -1314,11 +1397,12 @@ Link{
  }
  /*------------VProduktkort--------------*/
   .produktFlex{
-    width: 101vw;
+    width: 100vw;
     overflow: hidden;
+    border-left: #707070 1px solid;
   }
   .produktKort{
-    width: 50.5vw;
+    width: 49.88vw;
   }
   #produktbillede{
     width: 48vw;
@@ -1334,6 +1418,7 @@ Link{
     font-size: 4vw;
     padding-left: 5vw;
   }
+ 
   /*-------------Pages--------------*/
   /*--------forside------------*/
   .knapDiv3{
@@ -1559,5 +1644,39 @@ Link{
     width: 70vw;
     padding-left: 5vw;
     padding-bottom: 2vh;
+  }
+  /*---------vintage--------*/
+  #filtreÅben{
+    height: 15vh;
+    padding-top: 10vh;
+  }
+  #filterfunktion{
+    margin-top: 17vh;
+  }
+  .styleBox button{
+    font-size: 4vw
+  }
+  #filterBtnBox{
+    border-bottom: #707070 1px solid;
+  }
+  #filterBtnBox button{
+    width: 40vw;
+    margin-left: 30vw;
+    height: 4vh;
+    border-radius: 2vh;
+    font-size: 4vw;
+  }
+  #filterDukke{
+    border-bottom: none;
+  }
+  .filterAlle{
+    border-left: #707070 1px solid;
+    margin-top: 15vh;
+  }
+  .filterAlle .vintagePage{
+    border-left: none;
+  }
+  #filterVenstre{
+    margin-right: 20vw;
   }
 }

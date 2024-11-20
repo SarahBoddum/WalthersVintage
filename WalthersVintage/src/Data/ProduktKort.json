@@ -8,7 +8,10 @@
             "brystmål": 80,
             "taljemål": 64,
             "hoftemål": 88,
-            "type": "jakker"
+            "type": "jakker",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-2", "vintage-3", "vintage-4"]
         },
         {   
             "id": "vintage-2",
@@ -18,7 +21,10 @@
             "brystmål": 84,
             "taljemål": 68,
             "hoftemål": 92,
-            "type": "overdele"
+            "type": "overdele",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-2", "vintage-7", "vintage-5"]
         },
         {   
             "id": "vintage-3",
@@ -28,7 +34,10 @@
             "brystmål": 88,
             "taljemål": 72,
             "hoftemål": 96,
-            "type": "kjole/nederdele"
+            "type": "kjole/nederdele",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-8", "vintage-3", "vintage-10"]
         },
         {   
             "id": "vintage-4",
@@ -38,7 +47,10 @@
             "brystmål": 84,
             "taljemål": 68,
             "hoftemål": 92,
-            "type": "kjole/nederdele"
+            "type": "kjole/nederdele",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-1", "vintage-6", "vintage-9"]
         },
         {   
             "id": "vintage-5",
@@ -48,7 +60,10 @@
             "brystmål": 80,
             "taljemål": 64,
             "hoftemål": 88,
-            "type": "bukser"
+            "type": "bukser",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-1", "vintage-4", "vintage-5"]
         },
         {   
             "id": "vintage-6",
@@ -58,7 +73,10 @@
             "brystmål": 92,
             "taljemål": 76,
             "hoftemål": 100,
-            "type": "overdele"
+            "type": "overdele",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-3", "vintage-8", "vintage-10"]
         },
         {   
             "id": "vintage-7",
@@ -68,7 +86,10 @@
             "brystmål": 88,
             "taljemål": 72,
             "hoftemål": 96,
-            "type": "jakker"
+            "type": "jakker",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-2", "vintage-3", "vintage-7"]
         },
         {   
             "id": "vintage-8",
@@ -78,7 +99,10 @@
             "brystmål": 80,
             "taljemål": 64,
             "hoftemål": 88,
-            "type": "jakker"
+            "type": "jakker",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-2", "vintage-3", "vintage-4"]
         },
         {   
             "id": "vintage-9",
@@ -88,7 +112,10 @@
             "brystmål": 92,
             "taljemål": 76,
             "hoftemål": 100,
-            "type": "bukser"
+            "type": "bukser",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-5", "vintage-6", "vintage-7"]
         },
         {   
             "id": "vintage-10",
@@ -98,7 +125,10 @@
             "brystmål": 84,
             "taljemål": 68,
             "hoftemål": 92,
-            "type": "overdele"
+            "type": "overdele",
+            "alt": "Ruskindsjakke",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "anbefalinger": ["vintage-2", "vintage-3", "vintage-4"]
         }
     ]
 }
