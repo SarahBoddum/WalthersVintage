@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-export const VProduktkort = ({product}) => {
+export const DProduktkort = ({product}) => {
 
   return (
-    <div className='produktKort'>
+    <div className='dproduktKort'>
         <h3>{product.overskrift}</h3>
         <div id='produktStreg'></div>
         <Link to={`/produkt/${product.id}`} state={{ product }}>
-          <img id='produktbillede' src={product.billede} alt={product.alt}/>
+          <img id='dproduktbillede' src={product.billede} alt={product.alt}/>
         </Link>
         <p>{product.pris}</p>
         <Link to={`/produkt/${product.id}`} state={{ product }}>
@@ -18,4 +18,4 @@ export const VProduktkort = ({product}) => {
     </div>
   )
 }
-export default VProduktkort   
+export default DProduktkort   

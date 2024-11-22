@@ -34,13 +34,11 @@ export const FAQ = () => {
         <div id='faqs'>
           {questions.map((question, index) => (
             <div key={index}>
-              {/* Question */}
               <div className='question' onClick={() => toggleAnswer(index)}>
                 <div className='faqCirkel'>{index + 1}</div>
                 <p>{question}</p>
               </div>
 
-              {/* Answer */}
               <div className={`answer ${visibleAnswerIndex === index ? 'show' : ''}`}>
                 {visibleAnswerIndex === index && <p>{answers[index]}</p>}
               </div>

@@ -1,16 +1,29 @@
-import React, { useState } from 'react';
-import pilHøjre from '../assets/Images/pilH.png';
-import filterdukke from '../assets/Images/måledukke3.svg'
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../Data/firebase';
+import pilHøjre from '../assets/Images/pilH.png';
+import filterdukke from '../assets/Images/måledukke3.svg';
+import pilVenstre from '../assets/Images/pilV.png';
 import VProduktkort from '../components/VProduktkort';
-import produktdata from '../Data/ProduktKort.json';
-import pilVenstre from '../assets/Images/pilV.png'
 
 export const VintageProdukt = () => {
-  const [products] = useState(produktdata.produktkort); // Brug produktdata.produktkort
+  const [products, setProducts] = useState([]);
   const [filter, setFilter] = useState({ brystmål: null, taljemål: null, hoftemål: null, type: [] });
   const [filterActivated, setFilterActivated] = useState(false);
   const [isFilterOpen, setIsFilterOpen] = useState(true);
+
+ 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const querySnapshot = await getDocs(collection(db, "Vintage")); 
+      const productsArray = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })); 
+      setProducts(productsArray); 
+    };
+
+    fetchProducts();
+  }, []); 
+
 
   const filterProducts = () => {
 
@@ -23,7 +36,6 @@ export const VintageProdukt = () => {
       return filter.type.some((type) => product.type === type); 
     });
 
-    // 2. Filtrér de allerede typefiltrerede produkter baseret på størrelser
     return typeFilteredProducts.filter((product) => {
       const isInRange = (userValue, productValue) => {
         return userValue && userValue >= productValue - 4 && userValue <= productValue;
@@ -172,6 +184,8 @@ export const VintageProdukt = () => {
           <VProduktkort key={product.id} product={product} />
         ))}
       </div>
+
+      
     </div>
   );
 }

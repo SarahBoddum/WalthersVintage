@@ -23,7 +23,7 @@ function App() {
      <Navigation />
      <Helmet>
         <title>Walthers Vintage</title>
-        <link rel="icon" type="image/png" href="/assets/Images/wvlogo.png" />
+        <link rel="icon" type="image/png" href="filter.svg" />
       </Helmet>
      <Routes>
         <Route path="/" element={<ForsidePage />} />
