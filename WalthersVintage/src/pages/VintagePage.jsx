@@ -6,46 +6,57 @@ import VProduktkort from '../components/VProduktkort';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../Data/firebase';
 import vintageStatisk1 from '../assets/Images/placeholder2.png';
+import Unika1 from '../components/Unika1';
 
 export const Vintage = () => {
-  const [products, setProducts] = useState([]); // State til produkter
+  const [products, setProducts] = useState([]); // Produkter fra "Vintage"
+  const [productsHighlight, setProductsHighlight] = useState([]); // Produkter fra "Vintagehighlight"
 
   // Hent produktdata fra Firestore
   useEffect(() => {
     const fetchProducts = async () => {
-      const querySnapshot = await getDocs(collection(db, "Vintage")); // Firestore collection "Vintage"
-      const productsArray = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })); // Array af dokumenter
-      setProducts(productsArray); // Sæt produkterne i state
+      // Hent Vintage-produkter
+      const querySnapshot = await getDocs(collection(db, "Vintage"));
+      const productsArray = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+      setProducts(productsArray);
+
+      // Hent Vintagehighlight-produkter
+      const highlightSnapshot = await getDocs(collection(db, "Vintagehighlight"));
+      const highlightArray = highlightSnapshot.docs.map(doc => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setProductsHighlight(highlightArray);
     };
 
     fetchProducts();
-  }, []); // Hent data én gang, når komponentet loades
+  }, []);
 
   return (
     <div>
+      {/* Topsektion */}
       <VOBtop
         VOBmobilH1={<h1>Vintage</h1>}
-        VOBlaptopH1={<h1>vintage</h1>}
+        VOBlaptopH1={<h1>Vintage</h1>}
         VOBimg={vintageJakke}
         content={
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            incididunt ut labore et dolore magna aliqua.
           </p>
         }
-      ></VOBtop>
+      />
 
+      {/* Filter */}
       <Link id="filtre" to="/VintageProdukt">
-        <h2>filter</h2>
+        <h2>Filter</h2>
       </Link>
 
+      {/* Produkter - Første sektion */}
       <div className="filterAlle vintagePage">
         <div className="produktFlex">
           {products.slice(0, 2).map((product) => (
-            <div id={product.id} key={product.id}>
-              <VProduktkort product={product} />
-            </div>
+            <VProduktkort key={product.id} product={product} />
           ))}
         </div>
 
@@ -55,35 +66,41 @@ export const Vintage = () => {
         </div>
       </div>
 
-      {/* Gentagelse af produktsektioner med slice */}
-      <div className="produktFlex">
-        {products.slice(2, 4).map((product) => (
-          <div id={product.id} key={product.id}>
-            <VProduktkort product={product} />
-          </div>
+      {/* Produkter - Fleksibelt layout */}
+      <div className="flex">
+        <div className="produktFlex">
+          {products.slice(2, 4).map((product) => (
+            <VProduktkort key={product.id} product={product} />
+          ))}
+        </div>
+        <div className="produktFlex">
+          {products.slice(4, 6).map((product) => (
+            <VProduktkort key={product.id} product={product} />
+          ))}
+        </div>
+        
+      </div>
+
+      {/* Highlight sektion */}
+      <div className="highlightSection">
+        {productsHighlight.slice(0, 1).map((product) => (
+          <Unika1 key={product.id} product={product} />
         ))}
       </div>
-      <div className="produktFlex">
-        {products.slice(4, 6).map((product) => (
-          <div id={product.id} key={product.id}>
-            <VProduktkort product={product} />
-          </div>
-        ))}
-      </div>
-      <div className="produktFlex">
-        {products.slice(6, 8).map((product) => (
-          <div id={product.id} key={product.id}>
-            <VProduktkort product={product} />
-          </div>
-        ))}
-      </div>
-      <div className="produktFlex">
-        {products.slice(8, 10).map((product) => (
-          <div id={product.id} key={product.id}>
-            <VProduktkort product={product} />
-          </div>
-        ))}
-      </div>
+
+      {/* Produkter - Anden sektion */}
+      <div className="flex">
+        <div className="produktFlex">
+          {products.slice(6, 8).map((product) => (
+            <VProduktkort key={product.id} product={product} />
+          ))}
+        </div>
+        <div className="produktFlex">
+          {products.slice(8, 10).map((product) => (
+            <VProduktkort key={product.id} product={product} />
+          ))}
+        </div>
+        </div>
     </div>
   );
 };

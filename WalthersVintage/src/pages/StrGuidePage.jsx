@@ -1,5 +1,5 @@
 import React from 'react';
-import faqimg from '../assets/Images/FAQwv.jpg'
+import faqimg from '../assets/Images/størresler.webp'
 import dukke from '../assets/Images/måledukke3.svg'
 
 export const Størrelsesguide = () => {

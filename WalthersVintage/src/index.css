@@ -95,6 +95,9 @@ Link{
   text-decoration: none;
   font-family: "new-hero", sans-serif;
 }
+.flex{
+  display: flex;
+}
 /*--------------navigation--------------------*/
 .navigation{
   height: 70px;
@@ -474,7 +477,7 @@ Link{
 }
 .produktKort{
   width: 25vw;
-  height: fit-content;
+  height: 72vh;
   border-right: #707070 1px solid;
   border-bottom: #707070 1px solid;
 }
@@ -653,7 +656,9 @@ Link{
   height: 60vh;
   object-fit: cover;
 }
-
+.toggleSection{
+  display: flex;
+}
 /* Navigation */
 .produkt-carousel-navigation {
   margin-top: 3vh;
@@ -681,10 +686,166 @@ Link{
   border-radius: 50%;
   background-color: transparent;
 }
-
+.toggleSection{
+  text-align: center;
+  background-color: #DCD5CA;
+}
 .produkt-carousel-indicator.produkt-active {
   background-color: #707070;
 }
+#målh2{
+  padding-top: 5vh;
+}
+#ekstramålRamme{
+  width: 100%;
+  display: flex;
+  margin-top: 7vh;
+}
+.ekstramål{
+  width: 50%;
+}
+.ekstramål p{
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-top: #707070 1px solid;
+}
+#EstStr{
+  height: 7vh;
+  padding-top: 2vh;
+  border-top: #707070 1px solid;
+}
+#målP{
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 8vh;
+
+}
+#materialer{
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 8vh;
+}
+#materialer h2{
+  margin-bottom: 2vh;
+}
+#materialer p{
+  margin-bottom: 1vh;
+  width: 25vw;
+}
+/*---------KurvKontakt------*/
+#KurvKontakt{
+  width: 100vw;
+  height: fit-content;
+  padding-top: 70px;
+}
+#KKtop{
+  text-align: center;
+}
+#KKtext p{
+  width: 40vw;
+  margin-left: 15vw;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+#KKtop h1{
+  font-size: 7vw;
+  margin-top: 5vh;
+}
+#formularImg{
+  display: flex;
+  width: 83vw;
+}
+.KKimgStor{
+  width: 17vw;
+  height: 68vh;
+  object-fit: cover;
+}
+.inputKontakt{
+  width: 83vw;
+}
+.labelKontakt{
+  border-right: #707070 1px solid;
+  height: 7vh;
+  width: 20vw;
+  padding-left: 5vw;
+  padding-top: 2vh;
+}
+.labelKontakt label{
+  font-size: 1.5vw;
+}
+.mailEmne{
+  width: 100%;
+  border-top: #707070 1px solid;
+  height: 7vh; 
+  display: flex;
+}
+#inputbesked{
+  height: 47vh;
+  border-top: #707070 1px solid; 
+}
+.KKknap{
+  padding-top: 2vh;
+}
+.KKknap .OvalKnap{
+  border-radius: 4vw;
+  padding-top: 0.2vh;
+}
+/*--------------unika1--------*/
+.unika1{
+  width: 100vw;
+  display: flex;
+  height: 80vh;
+  border-bottom: #707070 1px solid;
+  background-color: #DCD5CA;
+}
+.Unika-VH{
+  padding-top: 3vh;
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.unikaImg{
+  width: 24vw;
+  margin-left: 17vw;
+  border-top-left-radius: 12vw;
+  border-top-right-radius: 12vw;
+  margin-top: 2vh;
+}
+#HihglightH2{
+  padding-bottom: 10vh;
+  padding-left: 12vw;
+  font-size: 3vw;
+}
+#hightlightTxt{
+  width: 25vw;
+  margin-left: 12.5vw;
+  padding-top: 20vh;
+}
+#unikaRamme{
+  width: 100%;
+  display: flex;
+  border-top: #707070 1px solid;
+  height: 10vh;
+}
+#unikaRamme h2{
+  padding-top: 3vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  border-right: #707070 1px solid;
+}
+.unikaBox{
+  padding-left: 1vw;
+  height: 50%;
+  padding-top: 1vh;
+  width: 39.9vw;
+  overflow: hidden;
+}
+.borderTop{
+  border-top: #707070 1px solid;
+}
+
 /*---------PAgES---------*/
 /*--------forside--------*/
 .knapDiv3{
@@ -1059,21 +1220,22 @@ Link{
   width: 50%;
   border-bottom: #707070 solid 1px;
   display: flex;
+  height: 72vh;
 }
 .SStemningsImg{
   width: 35vw;
-  margin-left: -35vw;
+  margin-left: -25vw;
   height: 75%;
   margin-top: 10%;
   object-fit: cover;
 }
 .vintageCirkel{
-  width: 40vw;
-  height: 40vw;
-  border-radius: 20vw;
+  width: 60vh;
+  height: 60vh;
+  border-radius: 30vh;
   border: #707070 solid 1px;
-  margin-left: 10vw;
-  margin-top: 2vh;
+  margin-left: 5vw;
+  margin-top: 5vh;
 }
 #filterVenstre{
   display: flex;
@@ -1135,6 +1297,9 @@ Link{
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
+  padding-left: 8vw;
+  padding-right: 5vw;
+  padding-bottom: 2vh;
 }
 
 .answer.show {
@@ -1587,8 +1752,58 @@ Link{
  .mobilVH{
   height: 60vh;
  }
+ .flex{
+  flex-direction: column;
+ }
+ 
+
  #detaljeProduktkort{
   flex-direction: column;
+ }
+ .toggleSection{
+  flex-direction: column;
+ }
+ .toggleSection .Detaljer-VH{
+  height: fit-content;
+ }
+ #ekstramålRamme{
+  margin-top: 20vh;
+ }
+ #EstStr{
+  border-bottom: #707070 1px solid;
+ }
+ #målP{
+  margin-bottom: 10vh;
+ }
+ /*----------Unika1--------------*/
+ .unika1{
+  flex-direction: column;
+  height: fit-content;
+ }
+ .Unika-VH{
+  width: 100.4%;
+  overflow: hidden;
+  height: fit-content;
+  border-bottom: #707070 solid 1px;
+ }
+
+ .unikaImg{
+  width: 60vw;
+  margin-left: 25vw;
+  border-top-left-radius: 30vw;
+  border-top-right-radius: 30vw;
+ }
+ #HihglightH2{
+  margin-top: 10vh;
+  font-size: 10vw;
+ }
+ #hightlightTxt{
+  width: 80vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+ }
+ .unikaBox{
+  width: 78.1vw;
  }
   /*-------------Pages--------------*/
   /*--------forside------------*/
@@ -1815,6 +2030,9 @@ Link{
     width: 70vw;
     padding-left: 5vw;
     padding-bottom: 2vh;
+  }
+  .answer{
+    padding-left: 20vw;
   }
   /*---------vintage--------*/
   #filtreÅben{

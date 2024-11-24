@@ -38,13 +38,15 @@ export const VintageProdukt = () => {
 
     return typeFilteredProducts.filter((product) => {
       const isInRange = (userValue, productValue) => {
-        return userValue && userValue >= productValue - 4 && userValue <= productValue;
+        if (userValue === null || userValue === undefined) return true;
+        if (productValue === null || productValue === undefined) return true;
+        return userValue >= productValue - 4 && userValue <= productValue;
       };
-
+    
       let matchesBrystmål = true;
       let matchesTaljemål = true;
       let matchesHoftemål = true;
-
+    
       if (filter.type.includes("jakker")) {
         matchesBrystmål = filter.brystmål ? isInRange(filter.brystmål, product.brystmål) : true;
         matchesTaljemål = filter.taljemål ? filter.taljemål <= product.taljemål : true;
@@ -54,6 +56,7 @@ export const VintageProdukt = () => {
         matchesTaljemål = filter.taljemål ? isInRange(filter.taljemål, product.taljemål) : true;
         matchesHoftemål = filter.hoftemål ? isInRange(filter.hoftemål, product.hoftemål) : true;
       } else if (filter.type.includes("kjole/nederdele")) {
+        // For kjoler/nederdele skal tomme brystmål accepteres
         matchesBrystmål = filter.brystmål ? isInRange(filter.brystmål, product.brystmål) : true;
         matchesTaljemål = filter.taljemål ? isInRange(filter.taljemål, product.taljemål) : true;
         matchesHoftemål = filter.hoftemål ? isInRange(filter.hoftemål, product.hoftemål) : true;
@@ -62,7 +65,7 @@ export const VintageProdukt = () => {
         matchesTaljemål = filter.taljemål ? isInRange(filter.taljemål, product.taljemål) : true;
         matchesHoftemål = true;
       }
-
+    
       return matchesBrystmål && matchesTaljemål && matchesHoftemål;
     });
   };

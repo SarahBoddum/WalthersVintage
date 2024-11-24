@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 export const VProduktkort = ({product}) => {
+  
 
   return (
     <div className='produktKort'>
@@ -18,4 +19,4 @@ export const VProduktkort = ({product}) => {
     </div>
   )
 }
-export default VProduktkort   
+export default VProduktkort;

@@ -10,21 +10,21 @@ export const FAQ = () => {
   };
 
   const questions = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
+    "Hvordan finder jeg nemmest den rigtige størrelse til min krop?",
+    "Er det muligt at prøve tøjet på inden jeg køber det?",
+    "Hvad sker der, når jeg har lavet en bestilling på et made to order produkt?",
+    "Gør det en forskel at købe vintage frem for nyt?",
+    "Hvordan vedligeholder jeg bedst det produkt, jeg har købt?",
+    "Kan jeg sende et produkt retur?",
   ];
 
   const answers = [
-    "Answer for question 1",
-    "Answer for question 2",
-    "Answer for question 3",
-    "Answer for question 4",
-    "Answer for question 5",
-    "Answer for question 6",
+    "Under Vintage kan du filtrere produkterne direkte ud fra dine egne kropsmål. På både Upcycled og Stitch_Stories kan du læse om de specifikke mål på produktet. Hvis du er i tvivl er du altdi velkomemn til at kontakte mig",
+    "Ja! Du er altid velkommen til at kigge forbi mit lille studie i Ry, hvis du gerne vil prøve tøjet først",
+    "Jeg kontakter dig og derfra snakker vi sammen om, hvad du ønsker ifht materialer og mål og derfra begynder min syproces. Leveringstiden afhænger af, hvor mange ordrer jeg har, men det vil jeg selvfølgelig holde dig opdateret på",
+    "Ja! Tøjindustrien er verdens 3. mest forurenende industri, derfor er det vigtigt at vi respekterer det tøj, der allerede er produceret",
+    "Kig vaskeanvisningen, der findes under punktet Materialer, når du har valgt det produkt, du er interesseret i eller læs nakkemærket, når du har modtaget produktet",
+    "Ja, det kan du. Læs gerne punktet Betingelser, som du finder under Om. Her står alle rettigheder, forbehold og information om egenbetaling",
   ];
 
   return (
