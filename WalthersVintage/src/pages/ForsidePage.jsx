@@ -114,7 +114,7 @@ export const Forside = () => {
 
       </Testimonial>
 
-      <Footer></Footer>
+
     </div>
   );
 }

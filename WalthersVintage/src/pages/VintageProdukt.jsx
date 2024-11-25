@@ -189,7 +189,7 @@ export const VintageProdukt = () => {
         ))}
       </div>
 
-      <Footer></Footer>
+    
     </div>
   );
 }

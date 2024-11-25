@@ -16,7 +16,7 @@ export const Stitch_Stories = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      // Hent Vintage-produkter
+      
       const querySnapshot = await getDocs(collection(db, "StitchStories"));
       const productsArray = querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
       setProducts(productsArray);
@@ -58,7 +58,7 @@ export const Stitch_Stories = () => {
             <SSUC2 key={product.id} product={product} />
           ))}
         
-        <Footer></Footer>
+       
       
     </div>
     

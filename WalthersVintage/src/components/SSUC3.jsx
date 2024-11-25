@@ -7,7 +7,7 @@ export const Baredygtig = ({product}) => {
   return (
     <div className='ssuctop'>
         <div id='ssuc3Pics'>
-        <h2 className='mobil'>{product.overskrift}</h2>
+            <h2 className='mobil'>{product.overskrift}</h2>
             <img src={product.billede1} alt={product.alt} id='ssuc3Pic1'/>
             <div id='ssuc3PicCirkel'> 
                 <h2 className='laptop'>{product.overskrift}</h2>

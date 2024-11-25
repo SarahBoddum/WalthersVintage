@@ -196,7 +196,7 @@ const ProduktDetaljer = () => {
                     )
                 )}
             </div>
-            <Footer></Footer>
+            
         </div>
     );
 };

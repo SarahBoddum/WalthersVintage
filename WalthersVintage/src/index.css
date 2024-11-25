@@ -89,6 +89,7 @@ input{
 }
 body{
   background-color: #EFEBE7;
+
 }
 Link{
   color: #000;
@@ -417,6 +418,8 @@ Link{
 }
 #UTlilleImg{
   width: 17vw;
+  height: 43vh;
+  object-fit: cover;
   margin-right: 5vw;
 }
 #unkaTxtPic h1{
@@ -440,7 +443,7 @@ Link{
   height: 90vh;
   padding-top: 70px;
   display: flex;
-  overflow: hidden;
+
 }
 #VOBimg{
   width: 30vw;
@@ -886,7 +889,8 @@ Link{
   margin-top: 7vh;
 }
 #ssucH{
-  width: 44vw;
+  width: 43vw;
+  background-color: #DF601C;
 }
 #ssucH{
   display: flex;
@@ -952,6 +956,14 @@ Link{
   color: #DF601C;
 }
 /*------------SSUC3----------*/
+#ssuc3Pics{
+  width: 64vw;
+  display: flex;
+  border-right: #707070 1px solid;
+  padding-top: 10vh;
+  padding-bottom: 14vh;
+  border-bottom: #707070 1px solid;
+}
 #ssuc3Pic1{
   width: 25vw;
   height: auto;
@@ -982,25 +994,17 @@ Link{
   padding-left: 16vw;
   padding-top: 8.5vw;
 }
-#ssuc3Pics{
-  width: 65vw;
-  display: flex;
-  border-right: #707070 1px solid;
-  padding-top: 10vh;
-  padding-bottom: 14vh;
-  border-bottom: #707070 1px solid;
-}
 .Rødtext{
   color: #DF601C;
   margin-bottom: -15vh;
   z-index: 2;
 }
 #ssuc3Text{
-  padding: 7vw;
   text-align: center;
   padding-top: 25vh;
   width: 35vw;
   border-bottom: #707070 1px solid;
+  background-color: #DF601C;
 }
 #ssuc3Text p{
   margin-bottom: 8vh;
