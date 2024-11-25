@@ -9,4 +9,4 @@ export const Baredygtig = () => {
     </div>
   )
 }
-export default Baredygtig
+export default Baredygtig;

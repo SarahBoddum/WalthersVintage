@@ -95,6 +95,7 @@ Link{
   text-decoration: none;
   font-family: "new-hero", sans-serif;
 }
+
 .flex{
   display: flex;
 }
@@ -290,10 +291,15 @@ Link{
   padding: 10%;
   text-align: center;
   border-right: 1px solid #707070;
+  flex-direction: column;
 }
 .OvalPic{
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+#OvalPicId{
+  margin-top: 8vh;
 }
 .OvalImg{
   width: 25VW;
@@ -342,7 +348,7 @@ Link{
 }
 .testiVenstre{
   width: 45vw;
-  height: 100%;
+  height: fit-content;
 }
 .bjalkeTop{
   width: 100%;
@@ -845,7 +851,208 @@ Link{
 .borderTop{
   border-top: #707070 1px solid;
 }
-
+/*-------SSUC1--------*/
+.ssuctop{
+  width: 100vw;
+  display: flex;
+}
+#ssucV{
+  padding-top: 15vh;
+  padding-left: 6vw;
+  display: flex;
+  width: 56vw;
+  border-right: #707070 1px solid;
+  padding-bottom: 10vh;
+  border-bottom: #707070 1px solid;
+}
+#SS1Img1{
+  width: 25vw;
+  height: 70vh;
+  object-fit: cover;
+  border-top-left-radius: 12.5vw;
+  border-top-right-radius: 12.5vw;
+}
+#billedText{
+  margin-left: 8vw;
+  margin-top: 10vh;
+  height: 60vh;
+}
+#billedText p{
+  text-align: right;
+}
+#SSImg2{
+  width: 15vw;
+  object-fit: cover;
+  margin-top: 7vh;
+}
+#ssucH{
+  width: 44vw;
+}
+#ssucH{
+  display: flex;
+}
+#vertikalP{
+  width: 9vw;
+  border-right: #707070 1px solid;
+  border-bottom: #707070 1px solid;
+}
+#vertikalP .Lodretvenstre{
+  font-size: 1.2vw;
+  padding-right: 1vw;
+  margin-top: 68vh;
+}
+#status{
+  margin-top: 66vh;
+  margin-left: -7vw;
+  width: 4vw;
+  color:#DF601C; 
+}
+#texBtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+#texBtn p{
+  padding-left: 7vw;
+  padding-right: 7vw;
+  margin-top: 30vh;
+}
+#texBtn .knapDiv3{
+  padding-top: 2vh;
+}
+/*--------ssuc - bygger på BeigeTxtPic-----*/
+.ssuc2Text{
+  border-left: #707070 1px solid;
+  border-right: #707070 1px solid;
+}
+.ssuc1PicPris{
+  border-left: #707070 1px solid;
+  padding-top: 10vh;
+}
+.ssucVertikal{
+  width: 4vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2vh;
+}
+#MCImg{
+  width: 16vw;
+  margin-top: 3vh;
+}
+.ssucBTP{
+  height: fit-content;
+}
+.OvalPic p{
+  text-align: right;
+  margin-bottom: 10vh;
+  margin-left: 33vw;
+}
+.TextMidt h2{
+  color: #DF601C;
+}
+/*------------SSUC3----------*/
+#ssuc3Pic1{
+  width: 25vw;
+  height: auto;
+  margin-left: 7vw;
+}
+#ssuc3Pic2{
+  width: 17vw;
+  height: auto;
+  z-index: 1;
+}
+#ssuc3PicCirkel{
+  margin-left: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 5vh;
+}
+#flex{
+  display: flex;
+}
+#ssuc3Cirkel{
+  margin-top: 4vh;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 10vw;
+  border: #707070 1px solid;
+  margin-left: -15vw; 
+  padding-left: 16vw;
+  padding-top: 8.5vw;
+}
+#ssuc3Pics{
+  width: 65vw;
+  display: flex;
+  border-right: #707070 1px solid;
+  padding-top: 10vh;
+  padding-bottom: 14vh;
+  border-bottom: #707070 1px solid;
+}
+.Rødtext{
+  color: #DF601C;
+  margin-bottom: -15vh;
+  z-index: 2;
+}
+#ssuc3Text{
+  padding: 7vw;
+  text-align: center;
+  padding-top: 25vh;
+  width: 35vw;
+  border-bottom: #707070 1px solid;
+}
+#ssuc3Text p{
+  margin-bottom: 8vh;
+}
+.ssuc3Knap{
+ padding-left: 2vw;
+ padding-right: 2vw;
+}
+/*------------------FOOTER-------------*/
+#footer{
+  background-color: #DCD5CA;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10vh;
+}
+#nål{
+  width: 50vw;
+  height: auto;
+  padding-right: 10vw;
+}
+#FooterInfo{
+  width: 40vw;
+  padding-left: 10vw;
+  padding-top: 6vh;
+}
+#FooterInfo h2{
+  margin-top: 4vh;
+}
+#FooterInfo p{
+  font-size: 1.6vw;
+}
+#SoMebox img{
+  width: 7vw;
+}
+#SoMebox{
+  margin-top: 5vh;
+  width: 16vw;
+  display: flex;
+  justify-content: space-between;
+}
+#mailA{
+  text-decoration: none;
+  color: black;
+  font-family: "new-hero", sans-serif;
+  font-weight: lighter;
+  font-size: 1.6vw;
+  line-height: 1.5;
+  cursor: pointer;
+}
+#mailA:hover{
+  color: #DF601C;
+}
 /*---------PAgES---------*/
 /*--------forside--------*/
 .knapDiv3{
@@ -1526,6 +1733,7 @@ Link{
   .OvalPic{
     height: fit-content;
     border-bottom: 1px solid #707070;
+    margin-left: -12vw;
   }
   .txtLodVandret{
     height: 45vh;
@@ -1554,6 +1762,7 @@ Link{
     flex-direction: column;
     height: 60vh;
     border-bottom: none;
+    height: fit-content;
   }
   .testiHøjre{
     width: 100vw;
@@ -1579,10 +1788,14 @@ Link{
   }
   .testiVenstre{
     width: 100vw;
+
   }
   .testiTxt{
     height: 50vh;
     padding-top: 10vh;
+  }
+  .bjalkeBund{
+    border-bottom: #707070 1px solid;
   }
   /*-----------UnikaTop-------------*/
   #unikaTop{
@@ -1673,6 +1886,7 @@ Link{
   }
   .produktKort{
     width: 49.88vw;
+    height: fit-content;
   }
   #produktbillede{
     width: 48vw;
@@ -1805,6 +2019,156 @@ Link{
  .unikaBox{
   width: 78.1vw;
  }
+ /*------------SSUC1--------------*/
+ .ssuctop{
+  flex-direction: column;
+ }
+ #ssucV{
+  width: 100vw;
+  border-right: none;
+  flex-direction: column;
+  padding-top: 1vh;
+  padding-left: 0vw;
+  border-bottom: #707070 1px solid;
+  height: 115vh;
+ }
+ .ssucTitel{
+  font-size: 9vw;
+  padding-left: 7vw;
+  margin-top: 8vh;
+  margin-bottom: 4vh;
+ }
+ #SS1Img1{
+  width: 70vw;
+  height: 50vh;
+  border-top-left-radius: 35vw;
+  border-top-right-radius: 35vw;
+  margin-left: 15vw;
+ }
+ #status{
+  margin-top: -4vh;
+  margin-left: 62vw;
+ }
+ #billedText{
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: 0vw;
+  height: 45vh;
+
+ }
+ #SSImg2{
+  width: 50vw;
+  height: 30vh;
+  margin-top: 0vh;
+  margin-right: 15vw;
+  margin-left: 4vw;
+ }
+ #ssucH{
+  width: 100vw;
+  height: 60vh;
+
+ }
+ #texBtn p{
+  margin-top: 10vh;
+  padding-top: 7vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+
+ }
+ #vertikalP .Lodretvenstre{
+  margin-top: 38vh;
+  font-size: 5vw;
+ }
+ #vertikalP{
+  width: 45vw;
+ }
+ #texBtn .knapDiv3{
+  padding-top: 1.1vh;
+ }
+ /*------------SSUC2------------*/
+ .ssuc2Text{
+  width: 74vw;
+  padding-top: 10vh;
+ }
+ .ssucVertikal{
+  width: 13vw;
+ }
+ #MCImg{
+  width: 40vw;
+ }
+ .ssuucHeight{
+  height: fit-content;
+ }
+ .ssuc1PicPris{
+  padding-top: 5vh;
+  border-left: none;
+ }
+  /*----------SSUC3---------------*/
+  #ssuc3Pics{
+    width: 100vw;
+    border-right: none;
+    flex-direction: column;
+  }
+  #ssuc3Pics h2{
+    padding-left: 5vw;
+    margin-bottom: 5vh;
+  }
+  #ssuc3Pic1{
+    width: 80vw;
+    margin-left: 20vw;
+  }
+  #ssuc3PicCirkel{
+    margin-left: 0vw;
+
+  }
+  #ssuc3Pic2{
+    width: 60vw;
+  }
+  #ssuc3Cirkel{
+    width: 80vw;
+    height: 80vw;
+    border-radius: 40vw;
+    margin-left: -60vw;
+    margin-top: 1vh;
+    padding-left: 62vw;
+    padding-top: 31vw;
+  }
+  #ssuc3Text{
+    width: 100vw;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+  }
+  .ssuc3Knap{
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+  /*------------FOOTER----------------------*/
+  #footer{
+    flex-direction: column;
+    padding-bottom: 5vh;
+
+  }
+  #nål{
+    width: 90vw;
+    padding-right: 0vw;
+  }
+  #FooterInfo{
+    width: 90vw;
+  }
+  #FooterInfo p{
+    font-size: 3.5vw;
+  }
+  #mailA{
+    font-size: 3.5vw;
+    color: #DF601C;
+  }
+  #SoMebox{
+    width: 40vw;
+  }
+  #SoMebox img{
+    width: 15vw;
+  }
   /*-------------Pages--------------*/
   /*--------forside------------*/
   .knapDiv3{

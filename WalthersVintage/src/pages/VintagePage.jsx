@@ -7,6 +7,7 @@ import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../Data/firebase';
 import vintageStatisk1 from '../assets/Images/placeholder2.png';
 import Unika1 from '../components/Unika1';
+import Footer from '../components/Footer';
 
 export const Vintage = () => {
   const [products, setProducts] = useState([]); // Produkter fra "Vintage"
@@ -100,7 +101,9 @@ export const Vintage = () => {
             <VProduktkort key={product.id} product={product} />
           ))}
         </div>
-        </div>
+      </div>
+      <Footer></Footer>
+      
     </div>
   );
 };

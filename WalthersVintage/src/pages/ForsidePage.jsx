@@ -11,6 +11,9 @@ import BeigeTxtPic from '../components/BeigeTxtPic';
 import Lis1 from '../assets/Images/placeholder1.png';
 import Testimonial from '../components/Testimonial';
 import testiPic from '../assets/Images/Qhvid2-lys.jpg'
+import { getDocs, collection } from 'firebase/firestore';
+import { db } from '../Data/firebase';
+import Footer from '../components/Footer';
 
 export const Forside = () => {
   const images = [
@@ -20,6 +23,8 @@ export const Forside = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  
 
   // Function to go to the previous image
   const goToPrevious = () => {
@@ -108,7 +113,8 @@ export const Forside = () => {
       TestiContent={<p>Når jeg kommer ind til dig, så ved jeg at det er god stil. Så har du været på jagt iblandt utallige bøjler med grimme ting og udvalgt alle skattene. Hvis jeg selv skulle på jagt, ville jeg ikke vide om den var cool or not når den hang imellem alle de andre un cool ting. Men når du har valgt den, så er jeg sikker på at den er cool</p>}>
 
       </Testimonial>
-      
+
+      <Footer></Footer>
     </div>
   );
 }

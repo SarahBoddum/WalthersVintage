@@ -26,7 +26,7 @@ export const BeigeTxtPic = (props) => {
                 </div>
             </div>
             <div className='OvalPic'>
-                <img src={OvalImg} alt={altTag} className={`OvalImg ${OvalImgcN}`} loading="lazy"/>
+                <img src={OvalImg} alt={altTag} id='OvalPicId' className={`OvalImg ${OvalImgcN}`} loading="lazy"/>
             </div>
         </div>
         <div className='knapDiv3 beige'>

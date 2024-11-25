@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import faqImg from '../assets/Images/FAQwv.jpg';
+import Footer from '../components/Footer';
 
 export const FAQ = () => {
   const [visibleAnswerIndex, setVisibleAnswerIndex] = useState(null); // Holder styr på hvilket spørgsmål der er åbent
@@ -28,26 +29,29 @@ export const FAQ = () => {
   ];
 
   return (
-    <div id='faqDiv'>
-      <div id='faqTxt'>
-        <h1 className='F100 laptop'>faq</h1>
-        <div id='faqs'>
-          {questions.map((question, index) => (
-            <div key={index}>
-              <div className='question' onClick={() => toggleAnswer(index)}>
-                <div className='faqCirkel'>{index + 1}</div>
-                <p>{question}</p>
-              </div>
+    <div>
+      <div id='faqDiv'>
+        <div id='faqTxt'>
+          <h1 className='F100 laptop'>faq</h1>
+          <div id='faqs'>
+            {questions.map((question, index) => (
+              <div key={index}>
+                <div className='question' onClick={() => toggleAnswer(index)}>
+                  <div className='faqCirkel'>{index + 1}</div>
+                  <p>{question}</p>
+                </div>
 
-              <div className={`answer ${visibleAnswerIndex === index ? 'show' : ''}`}>
-                {visibleAnswerIndex === index && <p>{answers[index]}</p>}
+                <div className={`answer ${visibleAnswerIndex === index ? 'show' : ''}`}>
+                  {visibleAnswerIndex === index && <p>{answers[index]}</p>}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+        <img src={faqImg} id='faqImg' alt='Mig og mit tøj' />
+        <h1 className='mobil'>faq</h1>
       </div>
-      <img src={faqImg} id='faqImg' alt='Mig og mit tøj' />
-      <h1 className='mobil'>faq</h1>
+      <Footer></Footer>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import Bjaelke from './Bjaelke';
 import DProduktkort from './DProduktkort';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../Data/firebase';
+import Footer from '../components/Footer.jsx';
 
 const ProduktDetaljer = () => {
     const location = useLocation();
@@ -195,6 +196,7 @@ const ProduktDetaljer = () => {
                     )
                 )}
             </div>
+            <Footer></Footer>
         </div>
     );
 };

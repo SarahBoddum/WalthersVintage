@@ -6,6 +6,7 @@ import pilHøjre from '../assets/Images/pilH.png';
 import filterdukke from '../assets/Images/måledukke3.svg';
 import pilVenstre from '../assets/Images/pilV.png';
 import VProduktkort from '../components/VProduktkort';
+import Footer from '../components/Footer';
 
 export const VintageProdukt = () => {
   const [products, setProducts] = useState([]);
@@ -188,7 +189,7 @@ export const VintageProdukt = () => {
         ))}
       </div>
 
-      
+      <Footer></Footer>
     </div>
   );
 }
