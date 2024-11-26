@@ -16,4 +16,4 @@ export const VOBtop = (props) => {
     </div>
   )
 }
-export default VOBtop
+export default VOBtop;

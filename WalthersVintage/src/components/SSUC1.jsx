@@ -7,11 +7,11 @@ export const SSUC1 = ({product}) => {
   return (
     <div className='ssuctop'>
       <div id='ssucV'>
-        <h2 className='ssucTitel mobil'>kjole #1</h2>
+        <h2 className='ssucTitel mobil'>{product.overskrift}</h2>
         <img src={product.billede1} alt={product.alt} id='SS1Img1'/>
         <h2 id='status'>{product.status}</h2>
         <div id='billedText'>
-          <h2 className='laptop'>kjole #1</h2>
+          <h2 className='laptop'>{product.overskrift}</h2>
           <img src={product.billede2} alt={product.alt} id='SSImg2'/>
           <p>Pris<br />1200</p>
         </div>

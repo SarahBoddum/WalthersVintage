@@ -103,7 +103,7 @@ export const Vintage = () => {
         </div>
       </div>
    
-      
+      <Footer></Footer>
     </div>
   );
 };

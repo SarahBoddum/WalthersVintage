@@ -378,7 +378,7 @@ Link{
 /*---------UnikaTop----------*/
 #unikaTop{
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   padding-top: 70px;
   display: flex;
 }
@@ -790,7 +790,7 @@ Link{
 }
 #inputbesked{
   height: 47vh;
-  border-top: #707070 1px solid; 
+  border-right: #707070 1px solid;
 }
 .KKknap{
   padding-top: 2vh;
@@ -798,6 +798,35 @@ Link{
 .KKknap .OvalKnap{
   border-radius: 4vw;
   padding-top: 0.2vh;
+}
+.inputdiv{
+  width: 40vw;
+
+}
+.kurv-produkt{
+  width: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  border-left: #707070 1px solid;
+  margin-left: -1px;
+}
+.produkttekstBestilling{
+  padding-left: 2vw;
+}
+.produkttekstBestilling h2{
+  padding-top: 1vh;
+  font-size: 1vw;
+}
+.kurv-produkt img{
+  width: 7vw;
+  height: 13vh;
+  object-fit: cover;
+  padding-top: 1vh;
+  padding-left: 1vw;
+}
+.produkttekstBestilling p{
+  font-size: 0.8vw;
+  padding-bottom: 1vh;
 }
 /*--------------unika1--------*/
 .unika1{
@@ -854,6 +883,11 @@ Link{
 .borderTop{
   border-top: #707070 1px solid;
 }
+.kontaktBeskedFlex{
+  display: flex;
+  border-top:#707070 1px solid;
+  border-left:#707070 1px solid;
+}
 /*-------SSUC1--------*/
 .ssuctop{
   width: 100vw;
@@ -890,7 +924,6 @@ Link{
 }
 #ssucH{
   width: 43vw;
-  background-color: #DF601C;
 }
 #ssucH{
   display: flex;
@@ -964,10 +997,15 @@ Link{
   padding-bottom: 14vh;
   border-bottom: #707070 1px solid;
 }
-#ssuc3Pic1{
+.ssuc3Pic1{
   width: 25vw;
   height: auto;
   margin-left: 7vw;
+}
+.nr2{
+  width: 35vw;
+  height: auto;
+
 }
 #ssuc3Pic2{
   width: 17vw;
@@ -1004,7 +1042,6 @@ Link{
   padding-top: 25vh;
   width: 35vw;
   border-bottom: #707070 1px solid;
-  background-color: #DF601C;
 }
 #ssuc3Text p{
   margin-bottom: 8vh;
@@ -1803,10 +1840,10 @@ Link{
   }
   /*-----------UnikaTop-------------*/
   #unikaTop{
-    height: 140vh;
+
     padding-top: 10vh;
     flex-direction: column;
-    margin-bottom: 10vh;
+
   }
   #unikaTop h1{
     font-size: 13vw;
@@ -1840,6 +1877,7 @@ Link{
   }
   #UTlilleImg{
     width: 40vw;
+    height: 35vh;
     margin-left: 5vw;
     margin-bottom: 5vh;
   }
@@ -1852,6 +1890,11 @@ Link{
     padding-left: 8vw;
     padding-right: 8vw;
     margin-left: 32%;
+  }
+  #unkaTxtPic{
+    width: 100vw;
+    height: fit-content;
+    padding-bottom: 10vh;
   }
   /*-----------VOBtop-----------*/
   #VOBtop{
@@ -2118,9 +2161,14 @@ Link{
     padding-left: 5vw;
     margin-bottom: 5vh;
   }
-  #ssuc3Pic1{
+  .ssuc3Pic1{
     width: 80vw;
     margin-left: 20vw;
+  }
+  .nr2{
+    width: 90vw;
+    height: auto;
+    margin-left: 10vw;
   }
   #ssuc3PicCirkel{
     margin-left: 0vw;

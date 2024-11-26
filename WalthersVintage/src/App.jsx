@@ -15,6 +15,8 @@ import StrGuidePage from './pages/StrGuidePage';
 import KurvPage from './pages/KurvPage';
 import VintageProdukt from './pages/VintageProdukt';
 import ProduktDetaljer from './Components/ProduktDetaljer';
+import UCdetaljer from './components/UCdetaljer';
+import { KurvProvider } from './components/KurvContext';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <title>Walthers Vintage</title>
         <link rel="icon" type="image/png" href="HeadWV.svg" />
       </Helmet>
+    <KurvProvider>
      <Routes>
         <Route path="/" element={<ForsidePage />} />
         <Route path="/kontakt" element={<KontaktPage/>} />
@@ -38,8 +41,10 @@ function App() {
         <Route path="/kurv" element={<KurvPage/>} />
         <Route path="/VintageProdukt" element={<VintageProdukt/>} />
         <Route path="*" element={<Navigate to="/"/>} />
+        <Route path="/produkt/uc/:id" element={<UCdetaljer />} />
         <Route path="/produkt/:id" element={<ProduktDetaljer />} />
      </Routes>
+    </KurvProvider>
     </>
   )
 }

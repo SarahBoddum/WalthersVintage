@@ -51,6 +51,7 @@ export const FAQ = () => {
         <img src={faqImg} id='faqImg' alt='Mig og mit tøj' />
         <h1 className='mobil'>faq</h1>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

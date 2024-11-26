@@ -6,14 +6,11 @@ import Bjaelke from './Bjaelke';
 import DProduktkort from './DProduktkort';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../Data/firebase';
-import Footer from '../components/Footer.jsx';
-import { useKurv } from '../components/KurvContext';
+import Footer from './Footer.jsx';
 
-const ProduktDetaljer = () => {
+const UCdetaljer = () => {
     const location = useLocation();
-    const { product } = location.state || {}; 
-    const { setKurvData } = useKurv();
-    
+    const { product } = location.state || {}; // Produktdata fra state
     const [anbefalinger, setAnbefalinger] = useState([null, null, null]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showMål, setShowMål] = useState(false);
@@ -22,7 +19,7 @@ const ProduktDetaljer = () => {
     // Hent data til anbefalede produkter
     useEffect(() => {
         const fetchAnbefalinger = async () => {
-            if (!product) return;
+            if (!product) return; // Hvis der ikke er noget produkt, hent ikke anbefalinger
 
             try {
                 const querySnapshot = await getDocs(collection(db, 'Vintage'));
@@ -31,6 +28,7 @@ const ProduktDetaljer = () => {
                     ...doc.data(),
                 }));
 
+                // Find anbefalinger baseret på ID'er
                 const anbefalingerData = [
                     product.anbefaling1,
                     product.anbefaling2,
@@ -71,31 +69,6 @@ const ProduktDetaljer = () => {
         if (!showMaterialer) setShowMål(false);
     };
 
-    const handleVidere = () => {
-        const produktData = {
-            billede: product.billede,
-            overskrift: product.overskrift,
-            pris: product.pris,
-        };
-
-        setKurvData((prevData) => {
-            const opdateretKurv = [...prevData, produktData];
-            localStorage.setItem('kurv', JSON.stringify(opdateretKurv));
-            return opdateretKurv;
-        });
-
-        if (!localStorage.getItem('kurv')) {
-            localStorage.setItem('kurv', JSON.stringify([produktData]));
-        }
-    };
-
-    useEffect(() => {
-        const gemtKurv = localStorage.getItem('kurv');
-        if (gemtKurv) {
-            setKurvData(JSON.parse(gemtKurv));
-        }
-    }, []);
-
     if (!product) {
         return (
             <div>
@@ -106,13 +79,16 @@ const ProduktDetaljer = () => {
 
     return (
         <div>
+            {/* Top sektion */}
             <div id="produktdetaljerTop">
+                {/* Venstre sektion med karrusel */}
                 <div className="Detaljer-VH borderR">
-                    <Link id="filterVenstre" to={`/vintage#${product.id}`}>
+                    <Link id="filterVenstre" to={`/upcycled#${product.id}`}>
                         <img src={pilVenstre} alt="Pil til venstre" className="filterpil" />
                         <p>Tilbage</p>
                     </Link>
 
+                    {/* Produkt karrusel */}
                     <div id="produktCarousel">
                         <div id="detaljeFlex">
                             <div id="detaljeImgRamme">
@@ -147,9 +123,7 @@ const ProduktDetaljer = () => {
                     </div>
 
                     <div className="knapDiv3 detaljeKD">
-                        <div className="OvalKnap Detaljeknap" onClick={handleVidere}>
-                            Læg i kurv
-                        </div>
+                        <div className="OvalKnap Detaljeknap">Læg i kurv</div>
                         <Link className="OvalKnap Detaljeknap" to="/kurv">Gå til kurv</Link>
                     </div>
                 </div>
@@ -209,22 +183,9 @@ const ProduktDetaljer = () => {
                 </div>
             )}
 
-            {/* Anbefalinger sektion */}
-            <Bjaelke>
-                <h2>MATCH MED:</h2>
-            </Bjaelke>
-            
-            <div id="detaljeProduktkort">
-            {anbefalinger.map((anbefaling, idx) =>
-                anbefaling ? (
-                <DProduktkort key={idx} product={anbefaling} />
-                 ) : null // Returnér ingenting for tomme anbefalinger
-                )}
-            </div>
-
             <Footer></Footer>
         </div>
     );
 };
 
-export default ProduktDetaljer;
+export default UCdetaljer;

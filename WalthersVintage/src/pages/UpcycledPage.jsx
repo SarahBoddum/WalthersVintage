@@ -7,10 +7,13 @@ import Bjaelke from '../components/Bjaelke';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../Data/firebase';
 import SSUC3 from '../components/SSUC3';
+import UCProduktkort from '../components/UCProduktkort';
+import SSUC1 from '../components/SSUC1';
 
 export const Upcycled = () => {
   const [products, setProducts] = useState([]); // Produkter fra "Vintage"
   const [productsHighlight, setProductsHighlight] = useState([]); // Produkter fra "Vintagehighlight"
+  const nr2 = "nr2";
 
   // Hent produktdata fra Firestore
   useEffect(() => {
@@ -47,10 +50,27 @@ export const Upcycled = () => {
     </Bjaelke>
       
     {productsHighlight.slice(0, 1).map((product) => (
-        <SSUC3 key={product.id} product={product} />
+        <SSUC3 key={product.id} product={product} imageClassName={nr2}/>
     ))}
 
-   
+    <div className="flex">
+        <div className="produktFlex">
+          {products.slice(0, 2).map((product) => (
+            <UCProduktkort key={product.id} product={product} />
+          ))}
+        </div>
+        <div className="produktFlex">
+          {products.slice(2, 4).map((product) => (
+            <UCProduktkort key={product.id} product={product} />
+          ))}
+        </div>     
+      </div>
+
+      {productsHighlight.slice(1, 2).map((product) => (
+            <SSUC1 key={product.id} product={product} />
+          ))}
+
+            <Footer></Footer>
     </div>
   )
 }

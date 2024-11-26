@@ -58,7 +58,7 @@ export const Stitch_Stories = () => {
             <SSUC2 key={product.id} product={product} />
           ))}
         
-       
+       <Footer></Footer>
       
     </div>
     

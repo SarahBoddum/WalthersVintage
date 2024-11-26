@@ -81,7 +81,7 @@ export const Størrelsesguide = () => {
           <img id='måledukke' src={dukke} alt='Illustration af hvor på kroppen du skal tage mål'/>
         </div>
       </div>
-    
+      <Footer></Footer>
     </div>
   )
 }
