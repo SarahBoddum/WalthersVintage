@@ -12,6 +12,7 @@ export const Kontakt = () => {
       LisbethKontakt={kontaktimg}
       laptopLisbeth={kontaktimg}
       kontakth1={<h1>kontakt mig</h1>}
+      kontakth1nr2={<h1>kontakt<br />mig</h1>}
       content={<p>Hvis du har et spørgsmål - det kan være hvad som helst, om min proces, et produkt eller hjælp til størrelse, så holde dig ikke tilbage. Jeg læser alt og svarer så hurtigt jeg kan.</p>}>  
       </KurvKontakt>
       

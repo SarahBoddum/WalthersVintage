@@ -1,18 +1,28 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 // Opret Context
 const KurvContext = createContext();
 
-// Provider-komponent, der holder global state
+// Context Provider
 export const KurvProvider = ({ children }) => {
-  const [kurvData, setKurvData] = useState(null);
+    const [kurvData, setKurvData] = useState([]);
 
-  return (
-    <KurvContext.Provider value={{ kurvData, setKurvData }}>
-      {children}
-    </KurvContext.Provider>
-  );
+    // Tilføj produkt til kurven
+    const addToKurv = (produkt) => {
+        setKurvData((prevKurv) => [...prevKurv, produkt]);
+    };
+
+    // Fjern produkt fra kurven
+    const removeFromKurv = (produktId) => {
+        setKurvData((prevKurv) => prevKurv.filter((produkt) => produkt.id !== produktId));
+    };
+
+    return (
+        <KurvContext.Provider value={{ kurvData, addToKurv, removeFromKurv }}>
+            {children}
+        </KurvContext.Provider>
+    );
 };
 
-// Custom hook til nem adgang til Context
+// Custom Hook
 export const useKurv = () => useContext(KurvContext);

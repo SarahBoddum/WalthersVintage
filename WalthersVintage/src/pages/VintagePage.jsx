@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import VProduktkort from '../components/VProduktkort';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../Data/firebase';
-import vintageStatisk1 from '../assets/Images/placeholder2.png';
+import vintageStatisk1 from '../assets/Images/placeholder2.jpg';
 import Unika1 from '../components/Unika1';
 import Footer from '../components/Footer';
 
@@ -42,8 +42,7 @@ export const Vintage = () => {
         VOBimg={vintageJakke}
         content={
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            Alt mit vintage er særligt udvalgt og handpicked fra hele verdenen. Jeg udvælger kun det, jeg selv ville gå i og går altid efter kvalitetsvarer, der passer ind i det aktuelle modebillede. 
           </p>
         }
       />

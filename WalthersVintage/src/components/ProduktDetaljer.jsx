@@ -12,7 +12,7 @@ import { useKurv } from '../components/KurvContext';
 const ProduktDetaljer = () => {
     const location = useLocation();
     const { product } = location.state || {}; 
-    const { setKurvData } = useKurv();
+    const { addToKurv } = useKurv(); // Brug addToKurv fra context
     
     const [anbefalinger, setAnbefalinger] = useState([null, null, null]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +22,7 @@ const ProduktDetaljer = () => {
     // Hent data til anbefalede produkter
     useEffect(() => {
         const fetchAnbefalinger = async () => {
-            if (!product) return;
+            if (!product) return; // Hvis der ikke er noget produkt, hent ikke anbefalinger
 
             try {
                 const querySnapshot = await getDocs(collection(db, 'Vintage'));
@@ -31,6 +31,7 @@ const ProduktDetaljer = () => {
                     ...doc.data(),
                 }));
 
+                // Find anbefalinger baseret på ID'er
                 const anbefalingerData = [
                     product.anbefaling1,
                     product.anbefaling2,
@@ -72,29 +73,14 @@ const ProduktDetaljer = () => {
     };
 
     const handleVidere = () => {
-        const produktData = {
+        // Brug addToKurv fra useKurv
+        addToKurv({
             billede: product.billede,
             overskrift: product.overskrift,
             pris: product.pris,
-        };
-
-        setKurvData((prevData) => {
-            const opdateretKurv = [...prevData, produktData];
-            localStorage.setItem('kurv', JSON.stringify(opdateretKurv));
-            return opdateretKurv;
+            id: product.id, // Sørg for at inkludere id, hvis du skal fjerne produktet senere
         });
-
-        if (!localStorage.getItem('kurv')) {
-            localStorage.setItem('kurv', JSON.stringify([produktData]));
-        }
     };
-
-    useEffect(() => {
-        const gemtKurv = localStorage.getItem('kurv');
-        if (gemtKurv) {
-            setKurvData(JSON.parse(gemtKurv));
-        }
-    }, []);
 
     if (!product) {
         return (
@@ -106,13 +92,16 @@ const ProduktDetaljer = () => {
 
     return (
         <div>
+            {/* Top sektion */}
             <div id="produktdetaljerTop">
+                {/* Venstre sektion med karrusel */}
                 <div className="Detaljer-VH borderR">
                     <Link id="filterVenstre" to={`/vintage#${product.id}`}>
                         <img src={pilVenstre} alt="Pil til venstre" className="filterpil" />
                         <p>Tilbage</p>
                     </Link>
 
+                    {/* Produkt karrusel */}
                     <div id="produktCarousel">
                         <div id="detaljeFlex">
                             <div id="detaljeImgRamme">
@@ -150,7 +139,7 @@ const ProduktDetaljer = () => {
                         <div className="OvalKnap Detaljeknap" onClick={handleVidere}>
                             Læg i kurv
                         </div>
-                        <Link className="OvalKnap Detaljeknap" to="/kurv">Gå til kurv</Link>
+                        <Link className="OvalKnap Detaljeknap" to="/kontakt">Gå til kurv</Link>
                     </div>
                 </div>
 
@@ -193,7 +182,6 @@ const ProduktDetaljer = () => {
                             <br /><br />
                             Er du i tvivl, må du altid skrive til mig, så hjælper jeg dig gerne
                         </p>
-                 
                     </div>
                 </div>
             )}
@@ -215,10 +203,10 @@ const ProduktDetaljer = () => {
             </Bjaelke>
             
             <div id="detaljeProduktkort">
-            {anbefalinger.map((anbefaling, idx) =>
-                anbefaling ? (
-                <DProduktkort key={idx} product={anbefaling} />
-                 ) : null // Returnér ingenting for tomme anbefalinger
+                {anbefalinger.map((anbefaling, idx) =>
+                    anbefaling ? (
+                    <DProduktkort key={idx} product={anbefaling} />
+                    ) : null // Returnér ingenting for tomme anbefalinger
                 )}
             </div>
 

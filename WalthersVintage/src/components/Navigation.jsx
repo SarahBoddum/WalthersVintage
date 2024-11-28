@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from '../assets/Images/wvlogo.png';
 import kurv from '../assets/Images/kurv.svg';
+import login from '../assets/Images/login.svg'
 
 export default function Navigation() {
     const [burgerActive, setBurgerActive] = useState(false);
@@ -73,10 +74,11 @@ export default function Navigation() {
                     </div>
                     
                     <NavLink className="navlink" to="/baredygtighed" onClick={closeAll}><div className="mobil Mcirkel"></div>Bæredygtighed</NavLink>
-                    <NavLink className={"navlink laptop"} id="logolink" to="/" onClick={closeAll}><img id="logo" src={logo} alt="Logo"></img></NavLink>
+                    <NavLink className={"navlink laptop"} id="logolink" to="/forsidepage" onClick={closeAll}><img id="logo" src={logo} alt="Logo"></img></NavLink>
                     <NavLink className="navlink laptop" id="Lkurv" to="/kurv" onClick={closeAll}><img id="kurvikon" src={kurv} alt="Kurv" loading="lazy"></img><span id="kurvtekst">Kurv</span></NavLink>
+                    <NavLink className={"navlink laptop"} to="/login" onClick={closeAll}><img id="loginikon" src={login} alt="Logo"></img></NavLink>
                 </div>
-                <NavLink className={"navlink mobil"} id="Mlogolink" to="/" onClick={closeAll}><img id="Mlogo" src={logo} alt="Logo" loading="lazy"></img></NavLink>
+                <NavLink className={"navlink mobil"} id="Mlogolink" to="/kurv" onClick={closeAll}><img id="Mlogo" src={logo} alt="Logo" loading="lazy"></img></NavLink>
             </div>
         </nav>
     );

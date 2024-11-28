@@ -32,7 +32,7 @@ export const Stitch_Stories = () => {
         UnikaTopStort={SStopStort}
         cirkelQuote={<p>Good<br />Things<br />Take<br />Time</p>}
         UnikaTopLille={SSmærke}
-        unikaTxt={<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>}>
+        unikaTxt={<p>Stitch_Stories er mit eget mærke og jeg syr og designer alt fra bunden. Jeg elsker den historie og det håndværk, man finder i brugte materialer, som altid er fundamentet for mine styles. Quilt og broderier er en kæmpe del af mig og min æstetik og det fletter jeg altid ind i de materialer, jeg bruger. <br /><br />Hvis et produkt er solgt, syr jeg det altid gerne igen på bestilling.</p>}>
       </Unika>
       <Bjaelke>
         {<h2>THANK YOU FOR BEING AN AMAZING CUSTOMER</h2>}

@@ -21,7 +21,7 @@ export const SSUC1 = ({product}) => {
           <p className='Lodretvenstre'>Produktinformation</p>
         </div>
         <div id='texBtn'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </p>
+          <p>{product.text}</p>
           <div className='knapDiv3'>
   
               <Link to="/kontakt" className='OvalKnap'>Kontakt</Link>

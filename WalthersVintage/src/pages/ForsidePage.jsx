@@ -8,7 +8,7 @@ import image3 from '../assets/Images/Qkjole3.webp';
 import pilVenstre from '../assets/Images/pilV.png';
 import pilHøjre from '../assets/Images/pilH.png';
 import BeigeTxtPic from '../components/BeigeTxtPic';
-import Lis1 from '../assets/Images/placeholder1.png';
+import Lis1 from '../assets/Images/LisbethLanding.jpg';
 import Testimonial from '../components/Testimonial';
 import testiPic from '../assets/Images/Qhvid2-lys.jpg'
 import { getDocs, collection } from 'firebase/firestore';

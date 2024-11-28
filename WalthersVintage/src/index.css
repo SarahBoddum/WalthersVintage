@@ -186,13 +186,17 @@ Link{
   display: block flex;  
 }
 #Lkurv{
-  margin-left: 40%;
+  margin-left: 35%;
   display: flex;
 }
 #kurvikon{
   width: 25px;
   margin-right: 2vw;
   margin-top: -4px;
+}
+#loginikon{
+  margin-left: -2vw;
+  width: 30px
 }
 /*------------KompEt-------------------*/
 
@@ -300,7 +304,7 @@ Link{
   flex-direction: column;
 }
 #OvalPicId{
-  margin-top: 8vh;
+  margin-top: 2vh;
 }
 .OvalImg{
   width: 25VW;
@@ -801,7 +805,6 @@ Link{
 }
 .inputdiv{
   width: 40vw;
-
 }
 .kurv-produkt{
   width: 40vw;
@@ -810,10 +813,10 @@ Link{
   border-left: #707070 1px solid;
   margin-left: -1px;
 }
-.produkttekstBestilling{
+.produkttekst{
   padding-left: 2vw;
 }
-.produkttekstBestilling h2{
+.produkttekst h2{
   padding-top: 1vh;
   font-size: 1vw;
 }
@@ -826,7 +829,14 @@ Link{
 }
 .produkttekstBestilling p{
   font-size: 0.8vw;
-  padding-bottom: 1vh;
+  padding-bottom: 2vh;
+}
+.samlet-pris{
+  padding-left: 1vw;
+  padding-top: 3vh;
+}
+.fjern-knap{
+  margin-top: 1vh;
 }
 /*--------------unika1--------*/
 .unika1{
@@ -1039,8 +1049,9 @@ Link{
 }
 #ssuc3Text{
   text-align: center;
+  padding: 8vw;
   padding-top: 25vh;
-  width: 35vw;
+  width: 37vw;
   border-bottom: #707070 1px solid;
 }
 #ssuc3Text p{
@@ -1049,6 +1060,85 @@ Link{
 .ssuc3Knap{
  padding-left: 2vw;
  padding-right: 2vw;
+}
+/*-------------loginPage------------*/
+#loginPage{
+  margin-top: 10vh;
+  padding-top: 10vh;
+  height: 90vh;
+  width: 50vw;
+  margin-left: 25vw;
+  text-align: center;
+  align-items: center;
+}
+#loginPage h1{
+  margin-bottom: 2vh;
+  font-size: 7vw;
+}
+#loginForm{
+  width: 100%;
+  border: 1px solid #707070;
+  margin-top: 5vh;
+}
+.loginput{
+  width: 100%;
+  height: 6vh;
+  border-bottom: 1px solid #707070;
+}
+#loginbtndiv{
+  border-top: #707070 solid 1px;
+  margin-top: 6vh;
+  height: 6vh;
+}
+.loginbtn{
+  border: none;
+  width: 50%;
+  height: 100%;
+}
+#loginbtndiv{
+  display: flex;
+}
+#loginbtndiv .OvalKnap{
+  margin-top: 1.5vh;
+}
+
+/*------------minside--------*/
+#minside{
+  margin-top: 15vh;
+  width: 50vw;
+  margin-left: 25vw;
+}
+#minside h1{
+  font-size: 8vw;
+  text-align: center;
+}
+#minside p{
+  text-align: center;
+  margin-top: 1vh;
+  margin-bottom: 5vh;
+}
+#minForm{
+  width: 100%;
+  border: #707070 1px solid;
+}
+.minformFlex{
+  display: flex;
+  height: 7vh;
+  border-bottom: #707070 solid 1px;
+
+}
+.minformFlex label{
+  width: 15vw;
+  height: 7vh;
+  padding-top: 2.2vh;
+  padding-left: 2vw;
+  border-right: #707070 1px solid;
+}
+.minBtn{
+  border-bottom: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 /*------------------FOOTER-------------*/
 #footer{
@@ -2066,6 +2156,58 @@ Link{
  .unikaBox{
   width: 78.1vw;
  }
+ /*-----------KURVKONTAKT--------*/
+ #KKtop{
+  display: flex;
+  text-align: left;
+ }
+ #KKtop p{
+  margin-left: 0vw;
+ }
+ #KKtop h1{
+  font-size: 12vw;
+ }
+ .KKimg{
+  width: 40vw;
+  margin-right: 4vw;
+  height: 60vh;
+  object-fit: cover;
+}
+#kontaktformular{
+  width: 100vw;
+}
+.kontaktBeskedFlex{
+  flex-direction: column;
+  border-left: none;
+}
+.labelKontakt label{
+  font-size: 3.5vw;
+}
+.inputdiv{
+  width: 100vw;
+}
+#inputbesked{
+  border-bottom: #707070 1px solid;
+  border-right: none;
+}
+.kurv-produkt{
+  width: 100vw;
+}
+.kurv-produkt img{
+  width: 20vw;
+}
+.samlet-pris{
+  padding-left: 2vw;
+}
+.produkttekst h2{
+  font-size: 5vw;
+}
+.KKknap{
+  padding-top: 1vh;
+}
+.mailEmne{
+  width: 100vw;
+}
  /*------------SSUC1--------------*/
  .ssuctop{
   flex-direction: column;
@@ -2194,6 +2336,24 @@ Link{
   .ssuc3Knap{
     padding-left: 8vw;
     padding-right: 8vw;
+  }
+  /*---------loginPage----------*/
+  #loginPage{
+    width: 100vw;
+    margin-left: 0vw;
+    padding-top: 3vh;
+  }
+  #loginPage h1{
+    font-size: 20vw;
+  }
+  #loginPage p{
+    width: 80vw;
+    margin-left: 10vw;
+  }
+  #loginForm{
+    margin-top: 10vh;
+    border-left: none;
+    border-right: none;
   }
   /*------------FOOTER----------------------*/
   #footer{

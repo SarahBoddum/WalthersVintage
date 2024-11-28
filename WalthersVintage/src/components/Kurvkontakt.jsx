@@ -2,19 +2,21 @@ import React from 'react';
 import { useKurv } from '../components/KurvContext'; 
 
 export const KurvKontakt = (props) => {
-    const { LisbethKontakt, laptopLisbeth, kontakth1, content } = props;
+    const { LisbethKontakt, laptopLisbeth, kontakth1, content, kontakth1nr2 } = props;
     const { kurvData, removeFromKurv } = useKurv();
 
     const handleFjernProdukt = (produktId) => {
         removeFromKurv(produktId);
     };
+  
 
     return (
         <div id='KurvKontakt'>
             <div id='KKtop'>
                 <img src={LisbethKontakt} className='KKimg mobil' alt='Lisbeth' />
                 <div id='KKtext'>
-                    <h1>{kontakth1}</h1>
+                    <h1 className='laptop'>{kontakth1}</h1>
+                    <h1 className='mobil'>{kontakth1nr2}</h1>
                     <p>{content}</p>
                 </div>
             </div>
@@ -45,7 +47,7 @@ export const KurvKontakt = (props) => {
                                 kurvData.map((produkt, index) => (
                                     <div key={index} className="kurv-produkt">
                                         <img src={produkt.billede} alt={`Produkt ${index + 1}`} />
-                                        <div className='produkttekstBestilling'>
+                                        <div className='produkttekst'>
                                             <h2>{produkt.overskrift}</h2>
                                             <p>Pris: {produkt.pris} DKK</p>
                                             <button
@@ -58,8 +60,11 @@ export const KurvKontakt = (props) => {
                                     </div>
                                 ))
                             ) : (
-                                <p>Ingen produktdata tilgængelig.</p>
+                                <p  className="samlet-pris">Du har endnu ikke udvalgt dit produkt</p>
                             )}
+                        <div className="samlet-pris">
+                            <p>Samlet pris: {kurvData.reduce((total, produkt) => total + parseFloat(produkt.pris), 0).toFixed(2)} DKK</p>
+                        </div>
                         </div>
                     </div>
                     <div className='knapDiv3 KKknap'>
