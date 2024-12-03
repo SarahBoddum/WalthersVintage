@@ -139,7 +139,7 @@ const ProduktDetaljer = () => {
                         <div className="OvalKnap Detaljeknap" onClick={handleVidere}>
                             Læg i kurv
                         </div>
-                        <Link className="OvalKnap Detaljeknap" to="/kontakt">Gå til kurv</Link>
+                        <Link className="OvalKnap Detaljeknap" to="/kurv">Gå til kurv</Link>
                     </div>
                 </div>
 

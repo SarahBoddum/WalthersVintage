@@ -49,7 +49,7 @@ export const FAQ = () => {
           </div>
         </div>
         <img src={faqImg} id='faqImg' alt='Mig og mit tøj' />
-        <h1 className='mobil'>faq</h1>
+        <h1 className='faqDivH1 mobil'>faq</h1>
       </div>
       <Footer></Footer>
     </div>

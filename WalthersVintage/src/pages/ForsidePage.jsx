@@ -100,7 +100,7 @@ export const Forside = () => {
       MidtContent={<p>Walthers Vintage er fashion og vintage i et roligt og imødekommende univers. Alt er håndvalgt, håndsyet og særligt udvalgt, så du nemt kan finde det unikke piece, du mangler. 
         <br /><br />
         Alt i butikken er valgt og lavet med respekt for den verden vi lever i og de ressourcer, vi forbruger. </p>}
-        KnapLink={<p className='paddingTop'>Læs mere</p>}
+        KnapLink={<p>Læs mere</p>}
         OvalImg={Lis1}>
         {<h3>Brand filosofi</h3>}   
       </BeigeTxtPic>
@@ -110,6 +110,7 @@ export const Forside = () => {
       TestiH2={<h2>testimonial</h2>}
       TopContent={<h2>Anna, kunde</h2>}
       BundContent={<p>Købt online</p>}
+      solgt={<p>solgt</p>}
       TestiContent={<p>Når jeg kommer ind til dig, så ved jeg at det er god stil. Så har du været på jagt iblandt utallige bøjler med grimme ting og udvalgt alle skattene. Hvis jeg selv skulle på jagt, ville jeg ikke vide om den var cool or not når den hang imellem alle de andre un cool ting. Men når du har valgt den, så er jeg sikker på at den er cool</p>}>
 
       </Testimonial>

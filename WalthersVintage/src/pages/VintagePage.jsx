@@ -8,6 +8,7 @@ import { db } from '../Data/firebase';
 import vintageStatisk1 from '../assets/Images/placeholder2.jpg';
 import Unika1 from '../components/Unika1';
 import Footer from '../components/Footer';
+import filter from '../assets/Images/filter.svg'
 
 export const Vintage = () => {
   const [products, setProducts] = useState([]); // Produkter fra "Vintage"
@@ -49,6 +50,7 @@ export const Vintage = () => {
 
       {/* Filter */}
       <Link id="filtre" to="/VintageProdukt">
+        <img src={filter} className='filterSvg' alt='filter ikon'/>
         <h2>Filter</h2>
       </Link>
 

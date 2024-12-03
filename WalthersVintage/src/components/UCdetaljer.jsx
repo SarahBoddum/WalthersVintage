@@ -2,47 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import pilVenstre from '../assets/Images/pilV.png';
 import pilHøjre from '../assets/Images/pilH.png';
-import Bjaelke from './Bjaelke';
-import DProduktkort from './DProduktkort';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../Data/firebase';
 import Footer from './Footer.jsx';
+import { useKurv } from '../components/KurvContext';
 
 const UCdetaljer = () => {
     const location = useLocation();
     const { product } = location.state || {}; // Produktdata fra state
-    const [anbefalinger, setAnbefalinger] = useState([null, null, null]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showMål, setShowMål] = useState(false);
     const [showMaterialer, setShowMaterialer] = useState(false);
+    const { addToKurv } = useKurv();
 
-    // Hent data til anbefalede produkter
-    useEffect(() => {
-        const fetchAnbefalinger = async () => {
-            if (!product) return; // Hvis der ikke er noget produkt, hent ikke anbefalinger
-
-            try {
-                const querySnapshot = await getDocs(collection(db, 'Vintage'));
-                const products = querySnapshot.docs.map(doc => ({
-                    id: doc.id,
-                    ...doc.data(),
-                }));
-
-                // Find anbefalinger baseret på ID'er
-                const anbefalingerData = [
-                    product.anbefaling1,
-                    product.anbefaling2,
-                    product.anbefaling3,
-                ].map(id => products.find(prod => prod.id === id) || null);
-
-                setAnbefalinger(anbefalingerData);
-            } catch (error) {
-                console.error("Fejl ved hentning af anbefalinger:", error);
-            }
-        };
-
-        fetchAnbefalinger();
-    }, [product]);
 
     // Konstrukt billed-array
     const billeder = [
@@ -67,6 +37,23 @@ const UCdetaljer = () => {
     const toggleMaterialer = () => {
         setShowMaterialer(!showMaterialer);
         if (!showMaterialer) setShowMål(false);
+    };
+
+    if (!product) {
+        return (
+            <div>
+                <p>Produktdata er ikke tilgængelig. Gå tilbage til <Link to="/vintage">Vintage-siden</Link>.</p>
+            </div>
+        );
+    }
+    const handleVidere = () => {
+        // Brug addToKurv fra useKurv
+        addToKurv({
+            billede: product.billede,
+            overskrift: product.overskrift,
+            pris: product.pris,
+            id: product.id, // Sørg for at inkludere id, hvis du skal fjerne produktet senere
+        });
     };
 
     if (!product) {
@@ -123,7 +110,9 @@ const UCdetaljer = () => {
                     </div>
 
                     <div className="knapDiv3 detaljeKD">
-                        <div className="OvalKnap Detaljeknap">Læg i kurv</div>
+                    <div className="OvalKnap Detaljeknap" onClick={handleVidere}>
+                            Læg i kurv
+                        </div>
                         <Link className="OvalKnap Detaljeknap" to="/kurv">Gå til kurv</Link>
                     </div>
                 </div>

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { db, auth, setDoc, doc, getDoc } from "../Data/firebase"; // Firebase import
 import { useAuth } from "../components/AuthContext"; // For at få brugerens autentificerede info
+import Footer from "../components/Footer";
 
 export const Minside = () => {
-  const { currentUser } = useAuth(); // Hent brugerens data fra AuthContext
+  const { currentUser, logout } = useAuth(); // Hent brugerens data og logout-funktion fra AuthContext
   const [bryst, setBryst] = useState("");
   const [talje, setTalje] = useState("");
   const [hofte, setHofte] = useState("");
@@ -29,6 +30,28 @@ export const Minside = () => {
     fetchUserData();
   }, [currentUser]);
 
+  // Log ud-knappen
+  const handleLogout = async () => {
+    try {
+      await logout(); // Brug logout fra AuthContext (skal kalde signOut(auth))
+      alert("Du er nu logget ud!");
+      console.log("Logout success"); // Debugging
+    } catch (error) {
+      console.error("Fejl ved log ud:", error.message);
+      setError("Kunne ikke logge ud. Prøv igen senere.");
+    }
+  };
+
+  // Simpel test af logout for debugging
+  const testLogout = async () => {
+    try {
+      await auth.signOut(); // Direkte kald til Firebase Authentication
+      console.log("Logout virker!"); // Hvis dette virker, kan problemet være i AuthContext
+    } catch (err) {
+      console.error("Fejl:", err.message);
+    }
+  };
+
   // Gem mål i Firestore
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,19 +63,23 @@ export const Minside = () => {
     try {
       if (currentUser) {
         const userDocRef = doc(db, "users", currentUser.uid);
-        await setDoc(userDocRef, {
-          bryst,
-          talje,
-          hofte,
-          hojde
-        }, { merge: true }); // Merge = opdater kun de felter, der er ændret
+        await setDoc(
+          userDocRef,
+          {
+            bryst,
+            talje,
+            hofte,
+            hojde,
+          },
+          { merge: true } // Merge = opdater kun de felter, der er ændret
+        );
 
         alert("Dine mål er gemt!");
       } else {
         setError("Du skal være logget ind for at gemme dine mål.");
       }
     } catch (error) {
-      console.error("Fejl ved gemning af data:", error);
+      console.error("Fejl ved gemning af data:", error.message);
       setError("Der opstod en fejl. Prøv igen.");
     }
   };
@@ -60,8 +87,14 @@ export const Minside = () => {
   return (
     <div id="minside">
       <h1>Min side</h1>
-      <p>Velkommen! Dette er din genvej til den nemmeste betjening uanset om du er interesseret i en vintage style eller et produkt lavet helt fra bunden. Indtast dine kropsmål her og anvend dem, når du skal finde det, der passer til din krop eller send dem automatisk med, når du bestiller et produkt. Så laver jeg mønstret, så det passer lige til din krop.</p>
-      <form id='minForm' onSubmit={handleSubmit}>
+      <p>
+        Velkommen! Dette er din genvej til den nemmeste betjening uanset om du
+        er interesseret i en vintage style eller et produkt lavet helt fra
+        bunden. Indtast dine kropsmål her og anvend dem, når du skal finde det,
+        der passer til din krop eller send dem automatisk med, når du bestiller
+        et produkt. Så laver jeg mønstret, så det passer lige til din krop.
+      </p>
+      <form id="minForm" onSubmit={handleSubmit}>
         <div className="minformFlex">
           <label>Brystmål:</label>
           <input
@@ -81,7 +114,7 @@ export const Minside = () => {
           />
         </div>
         <div className="minformFlex">
-          <label>Hofteomkreds:</label>
+          <label>Hoftemål:</label>
           <input
             type="number"
             value={hofte}
@@ -99,11 +132,19 @@ export const Minside = () => {
           />
         </div>
         <div className="minformFlex minBtn">
-          <button className="OvalKnap" type="submit">Gem Mål</button>
+          <button className="OvalKnap" type="submit">
+            Gem Mål
+          </button>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          {currentUser && (
+          <div>
+            <button className="OvalKnap" onClick={testLogout}>Logout</button>
+          </div>
+          )}
         </div>
       </form>
+      <Footer></Footer>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };

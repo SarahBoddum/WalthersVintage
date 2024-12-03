@@ -34,12 +34,19 @@ export default function Navigation() {
 
     return (
         <nav className="navigation" id="navbar">
-            <div className={krydsActive ? 'close' : null} onClick={() => {
-                toggleBurger();
-                toggleKryds();
-            }} id="burger-menu">
-                <span></span>
+            <div id='mobilheader'>
+                <div id="mobilIkoner">
+                    <NavLink className={"mobil"} to="/login" onClick={closeAll}><img id="loginikon" src={login} alt="Logo"></img></NavLink>
+                    <NavLink className="navlink mobil" id="Mkurv" to="/kurv" onClick={closeAll}><img id="Mkurvikon" src={kurv} alt="Kurv" loading="lazy"></img><span id="kurvtekst">Kurv</span></NavLink>
+                </div>
+                <div className={krydsActive ? 'close' : null} onClick={() => {
+                    toggleBurger();
+                    toggleKryds();
+                }} id="burger-menu">
+                    <span></span>
+                </div>
             </div>
+            
             <div id="menu" className={burgerActive ? 'overlay' : null}>
                 <div id="xul">
                     <div className="dropdown">
@@ -52,6 +59,7 @@ export default function Navigation() {
                             <div className="dropdown-content">
                                 <NavLink className="navlink" to="/om" onClick={closeAll}><div className="mobil Mcirkel"></div>Om Walthers Vintage</NavLink>
                                 <NavLink className="navlink" to="/faq" onClick={closeAll}><div className="mobil Mcirkel"></div>FAQ</NavLink>
+                                <NavLink className="navlink" to="/betingelser" onClick={closeAll}><div className="mobil Mcirkel"></div>Betingelser</NavLink>
                                 <NavLink className="navlink" to="/kontakt" onClick={closeAll}><div className="mobil Mcirkel"></div>Kontakt</NavLink>
                             </div>
                         )}
@@ -73,12 +81,12 @@ export default function Navigation() {
                         )}
                     </div>
                     
-                    <NavLink className="navlink" to="/baredygtighed" onClick={closeAll}><div className="mobil Mcirkel"></div>Bæredygtighed</NavLink>
+                    <NavLink className="navlink HJÆLP" to="/baredygtig" onClick={closeAll}><div className="mobil Mcirkel"></div>Mit Håndværk</NavLink>
                     <NavLink className={"navlink laptop"} id="logolink" to="/forsidepage" onClick={closeAll}><img id="logo" src={logo} alt="Logo"></img></NavLink>
-                    <NavLink className="navlink laptop" id="Lkurv" to="/kurv" onClick={closeAll}><img id="kurvikon" src={kurv} alt="Kurv" loading="lazy"></img><span id="kurvtekst">Kurv</span></NavLink>
-                    <NavLink className={"navlink laptop"} to="/login" onClick={closeAll}><img id="loginikon" src={login} alt="Logo"></img></NavLink>
+                    <NavLink className="navlink laptop" id="Lkurv" to="/kurv" onClick={closeAll}><img id="Lkurvikon" src={kurv} alt="Kurv" loading="lazy"></img><span id="kurvtekst">Kurv</span></NavLink>
+                    <NavLink className={"navlink loginlaptop"} to="/login" onClick={closeAll}><img id="loginikon" src={login} alt="Logo"></img></NavLink>
                 </div>
-                <NavLink className={"navlink mobil"} id="Mlogolink" to="/kurv" onClick={closeAll}><img id="Mlogo" src={logo} alt="Logo" loading="lazy"></img></NavLink>
+                <NavLink className={"navlink mobil"} id="Mlogolink" to="/" onClick={closeAll}><img id="Mlogo" src={logo} alt="Logo" loading="lazy"></img></NavLink>
             </div>
         </nav>
     );

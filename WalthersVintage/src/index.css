@@ -189,7 +189,7 @@ Link{
   margin-left: 35%;
   display: flex;
 }
-#kurvikon{
+#Lkurvikon{
   width: 25px;
   margin-right: 2vw;
   margin-top: -4px;
@@ -301,11 +301,10 @@ Link{
 .OvalPic{
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
-#OvalPicId{
-  margin-top: 2vh;
-}
+
 .OvalImg{
   width: 25VW;
   border-radius: 15VW;
@@ -333,6 +332,7 @@ Link{
 .buePic{
   width: 25vw;
   height: 60vh;
+  object-fit: cover;
   border-top-left-radius: 12.5vw;
   border-top-right-radius: 12.5vw;
 }
@@ -346,6 +346,7 @@ Link{
   text-align: center;
   padding-top: 3vw;
   margin-left: -4vw;
+  display: block;
 }
 .testiHøjre h2{
   font-size: 4vw;
@@ -378,6 +379,14 @@ Link{
   border-top: 1px solid #707070;
   padding-left: 3vw;
   padding-top: 1.7vh;
+}
+.solgtNone{
+  background-color: unset;
+  border: none;
+}
+.buetilOval{
+  border-bottom-left-radius: 12.5vw;
+  border-bottom-right-radius: 12.5vw;
 }
 /*---------UnikaTop----------*/
 #unikaTop{
@@ -447,7 +456,7 @@ Link{
   height: 90vh;
   padding-top: 70px;
   display: flex;
-
+  overflow: hidden;
 }
 #VOBimg{
   width: 30vw;
@@ -466,7 +475,6 @@ Link{
   margin-top: 20vh;
   font-size: 6vw;
   padding-left: 5vw;
-  padding-bottom: 2vh;
 }
 .streg{
   width: 100%;
@@ -474,12 +482,11 @@ Link{
   background-color: #707070;
 }
 #VOBtxt p{
-  width: 55vw;
+  width: 40vw;
   padding-left: 7vw;
-  padding-right: 28vw;
   margin-top: 10vh;
   text-align: center;
-
+  padding-bottom: 2vh;
 }
 /*------------VProduktkort----------*/
 .produktFlex{
@@ -751,6 +758,11 @@ Link{
   height: fit-content;
   padding-top: 70px;
 }
+.kontaktBeskedFlex{
+  display: flex;
+  border-top:#707070 1px solid;
+  border-left:#707070 1px solid;
+}
 #KKtop{
   text-align: center;
 }
@@ -767,6 +779,8 @@ Link{
 #formularImg{
   display: flex;
   width: 83vw;
+  height: 68vh;
+
 }
 .KKimgStor{
   width: 17vw;
@@ -793,18 +807,36 @@ Link{
   display: flex;
 }
 #inputbesked{
-  height: 47vh;
-  border-right: #707070 1px solid;
+  width: 100%;
+  height: 48vh;
+  background-color: #EFEBE7;
+  border: none;
+  padding-top: 2vh;
+  padding-left: 2vw;
+  color: black;
+  font-family: "new-hero", sans-serif;
+  font-weight: lighter;
+  font-size: 1vw;
+  line-height: 1.5;
 }
 .KKknap{
-  padding-top: 2vh;
+  padding-top: 1vh;
+  border-top: #707070 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: #707070 1px solid;
 }
 .KKknap .OvalKnap{
   border-radius: 4vw;
-  padding-top: 0.2vh;
+  margin-bottom: 1.2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .inputdiv{
-  width: 40vw;
+  width: 50%;
+  border-left: #707070 1px solid;
 }
 .kurv-produkt{
   width: 40vw;
@@ -837,6 +869,46 @@ Link{
 }
 .fjern-knap{
   margin-top: 1vh;
+}
+.prisBlockMNone{
+  display: none;
+}
+
+.kurv-mål{
+  display: none;
+  width: 100%;
+  height: fit-content;
+}
+.kurvBlockNone{
+  display: block;
+}
+.KurvInput{
+  width: 100%;
+  height: 5vh;
+  border-top: #707070 1px solid;
+}
+.kurvbtn{
+  margin-left: 2vw;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
+.forminputdiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#whenSent{
+  display: block flex;
+  flex-direction: column;
+  padding-top: 15vh;
+  text-align: center;
+  padding-left: 10vw;
+  align-items: center;
+
+}
+#whenSent p{
+  margin-bottom: 5vh;
+  margin-top: 5vh;
 }
 /*--------------unika1--------*/
 .unika1{
@@ -893,11 +965,7 @@ Link{
 .borderTop{
   border-top: #707070 1px solid;
 }
-.kontaktBeskedFlex{
-  display: flex;
-  border-top:#707070 1px solid;
-  border-left:#707070 1px solid;
-}
+
 /*-------SSUC1--------*/
 .ssuctop{
   width: 100vw;
@@ -1004,18 +1072,18 @@ Link{
   display: flex;
   border-right: #707070 1px solid;
   padding-top: 10vh;
-  padding-bottom: 14vh;
+  padding-bottom: 24vh;
   border-bottom: #707070 1px solid;
 }
 .ssuc3Pic1{
   width: 25vw;
-  height: auto;
   margin-left: 7vw;
 }
 .nr2{
   width: 35vw;
-  height: auto;
-
+  height: 58vh;
+  margin-bottom: -10vh;
+  object-fit: cover;
 }
 #ssuc3Pic2{
   width: 17vw;
@@ -1060,6 +1128,15 @@ Link{
 .ssuc3Knap{
  padding-left: 2vw;
  padding-right: 2vw;
+}
+.OBssuc3text{
+  padding-top: 20vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+.OBssuc3text h2{
+  margin-bottom: 3vh;
 }
 /*-------------loginPage------------*/
 #loginPage{
@@ -1138,7 +1215,50 @@ Link{
   border-bottom: none;
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/*--------OB1--------------------------*/
+#obtop{
+  background-color: #DCD5CA;
+  height: fit-content;
+  width: 100vw;
+  border-bottom: #707070 1px solid;
+}
+#OBramme{
+  display: flex;
+  width: 100vw;
+}
+#Obh2{
+  margin-bottom: 2vh;
+}
+#nudeBjalke{
+  height: 7vh;
+  border-top: #707070 1px solid;
+}
+.borderL{
+  border-left: #707070 1px solid;
+}
+#OBimg{
+  width: 30vw;
+  margin-left: 10vw;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+  border-top-left-radius: 15vw;
+  border-top-right-radius: 15vw;
+}
+#Obh2{
+  width: 100%;
+  text-align: center;
+  margin-top: 18vh;
+}
+#Obhp{
+  width: 30vw;
+  margin-left: 10vw;
+  text-align: center;
+  margin-top: 2vh;
 }
 /*------------------FOOTER-------------*/
 #footer{
@@ -1200,8 +1320,7 @@ Link{
 }
 .knapKasse{
   width: 33%;
-  height: 100%;
-  padding-top: 2vh;
+  height: 7vh;
   display: flex;
   justify-content: center;
 }
@@ -1213,7 +1332,8 @@ Link{
   width: 10vw;
   height: 3vh;
   text-align: center;
-  padding-top: 0.5%;
+  display: flex;
+  justify-content: center;
   border: 1px solid #707070;
   border-radius: 1vw;
   color: #000;
@@ -1267,7 +1387,12 @@ Link{
 }
 .strImg{
   width: 35%;
-  height: auto;
+  height: 86vh;
+  object-fit: cover;
+}
+.MarginBtn{
+  margin-top: 1.75vh;
+  font-size: 1vw;
 }
 .StrTxt{
   width: 65%;
@@ -1296,7 +1421,6 @@ Link{
   width: 100%;
   height: 10vh;
   display: flex;
-  border-top: 1px solid #707070;
   padding-top: 3vh;
   padding-bottom: 2vh;
   border-bottom: 1px solid #707070;
@@ -1310,7 +1434,7 @@ Link{
   display: flex;
 }
 .cirkelholder{
-  height: 9vh; 
+  height: 10.5vh; 
   padding-top: 1vh;
   width: 10vw;
   border-bottom: 1px solid #707070;
@@ -1328,9 +1452,9 @@ Link{
   margin-right: -10vw;
 }
 .mål{
-  height: 7vh;
+  height: 8.5vh;
   border-bottom: 1px solid #707070;
-  width: 18.31vw;
+  width: 18.11vw;
 }
 .mål p{
   margin-top: 2vh;
@@ -1355,9 +1479,13 @@ Link{
   border: 1px solid #707070;
   margin-left: 7.5vw;
   margin-top: 1vh;
+ 
 }
 #måledukke{
   width: 15vw;
+}
+.borderB{
+  border-bottom: none;
 }
 /*--------------vintage----------*/
 #filtre{
@@ -1482,7 +1610,6 @@ Link{
   padding-left: 2vw;
   height: 10vh;
   padding-top: 3vh;
-  border-bottom: #707070 1px solid;
 }
 .dineMål{
   width: 100%;
@@ -1588,6 +1715,16 @@ Link{
 #filterVenstre p{
   padding-top: 0.5vh;
 }
+.KropsmålsKnapDiv{
+  width: 100%;
+  display: flex;
+  border-bottom: #707070 1px solid;
+}
+.kropsBtn{
+  margin-top: 3.2vh;
+  margin-right: 5vw;
+  width: 20vw;
+}
 /*------------faq-------------------*/
 #faqDiv{
   width: 100%;
@@ -1603,6 +1740,14 @@ Link{
 #faqDiv h1{
   padding-left: 10vw;
   margin-bottom: 7vh;
+}
+.F100b{
+  margin-top: 5vh;
+  font-size: 7vw;
+}
+.betingleseh2{
+  font-size: 1.5vw;
+  margin-top: 2vh;
 }
 #faqTxt{
   width: 64vw;
@@ -1674,17 +1819,23 @@ Link{
   }
   /*-------------burger---------------*/
   .navlink{
-      font-size: 9vw;
+      font-size: 5.5vw;
       border-top: #707070 1px solid;
       display: flex;
-      padding-top: 3vh;
-      padding-bottom: 3vh;
+      padding-top: 2.5vh;
+      padding-bottom: 2.5vh;
   }
   .navigation{
     padding-left: 0vw;
   }
+  #mobilheader{
+    display: flex;
+    justify-content: space-between;
+  }
   #burger-menu{
       display: block;
+      margin-left: 5vw;
+      z-index: 1;
   }
   #burger-menu span{
       margin-top: 20px;
@@ -1739,7 +1890,7 @@ Link{
   #Mlogo{
       width: 50%;
       margin-left: 25%;
-      margin-top: 10px;
+      margin-top: -10vh;
   }
   #logolink{
     display: none;
@@ -1774,9 +1925,11 @@ Link{
       padding-top: 5vh;
   }
   #produktDD{
-    margin-top: -4.3vh;
+    margin-top: -2.3vh;
   }
-  /* Stil dropdown-containeren */
+.HJÆLP{
+  border-bottom: #000 1px solid;
+}
 
 
 .dropdown-content {
@@ -1784,13 +1937,13 @@ Link{
   flex-direction: column; 
   position: relative; 
   width: 150vw;
-  margin-top: -4vh;
+  margin-top: -2vh;
   border-bottom: none;
 }
 .dropdown-content .navlink{
   font-size: 10vw;
   padding-left: 10vw;
-  margin-bottom: -1.5vh;
+  margin-bottom: -2vh;
 }
 
   #kurv{
@@ -1810,20 +1963,40 @@ Link{
   #kurvtekst{
     display: none;
   }
-  #kurvikon{
-    position: absolute;
-    margin-left: -40%;
-    margin-top: -3vh;
+  #Lkurvikon{
+    display: none;
   }
+  #mobilIkoner{
+    width: 50px;
+    display: flex;
+    
+  }
+  #Mkurv{
+    border-top: none;
+  }
+  #Mkurvikon{
+    position: absolute;
+    margin-top: 2.5vh;
+    width: 26px;
+  }
+
   #Lkurv{
     border-top: none;
   }
-
+  .loginlaptop{
+    display: none;
+  }
+  #loginikon{
+    margin-left: 10vw;
+    padding-top: 1.5vh;
+    width: 7vw;
+  }
   /*------------KompEt------------*/
   .forside{
     flex-direction: column-reverse;
-    margin-top: 20vh;
+    margin-top: 25vh;
   }
+  
   .F100{
     font-size: 17vw;
   }
@@ -1846,6 +2019,7 @@ Link{
     padding-left: 62vw;
     padding-top: 10vh;
   }
+  
   /*-----------Bjælke---------------*/
   .forside1h2{
     font-size: 4.5vw;
@@ -1867,7 +2041,7 @@ Link{
     margin-left: -12vw;
   }
   .txtLodVandret{
-    height: 45vh;
+    height: fit-content;
   }
   .TextMidt{
     width: 100%;
@@ -1891,7 +2065,6 @@ Link{
   /*---------testimonial------------*/
   .testiTxtPic{
     flex-direction: column;
-    height: 60vh;
     border-bottom: none;
     height: fit-content;
   }
@@ -1899,13 +2072,15 @@ Link{
     width: 100vw;
     border-right: none;
     border-bottom: 1px solid #707070;
+    height: fit-content;
   }
   .buePic{
     width: 70vw;
     border-top-left-radius: 35vw;
     border-top-right-radius: 35vw;
-    height: 40vh;
-    margin-bottom: 2vh;
+    height: 50vh;
+    object-fit: cover;
+    margin-bottom: 5vh;
   }
   .solgt{
     width: 20vw;
@@ -1915,18 +2090,27 @@ Link{
   }
   .testiHøjre h2{
     font-size: 12vw;
-    padding-bottom: 2vh;
+    padding-bottom: 5vh;
   }
   .testiVenstre{
     width: 100vw;
-
+    height: fit-content;
   }
   .testiTxt{
-    height: 50vh;
+ 
     padding-top: 10vh;
   }
   .bjalkeBund{
     border-bottom: #707070 1px solid;
+  }
+  .buetilOval{
+    border-bottom-left-radius: 40vw;
+    border-bottom-right-radius: 40vw;
+    border-top-left-radius: 40vw;
+    border-top-right-radius: 40vw;
+    height: 60vh;
+    object-fit: cover;
+    width: 80vw;
   }
   /*-----------UnikaTop-------------*/
   #unikaTop{
@@ -1993,7 +2177,7 @@ Link{
   }
   
  #VOBtop h1{
-  font-size: 20vw;
+  font-size: 15vw;
   text-align: center;
   padding-top: 1vh;
  }
@@ -2164,6 +2348,9 @@ Link{
  #KKtop p{
   margin-left: 0vw;
  }
+ #formularImg{
+  height: fit-content;
+ }
  #KKtop h1{
   font-size: 12vw;
  }
@@ -2189,6 +2376,7 @@ Link{
 #inputbesked{
   border-bottom: #707070 1px solid;
   border-right: none;
+  font-size: 3vw;
 }
 .kurv-produkt{
   width: 100vw;
@@ -2207,6 +2395,10 @@ Link{
 }
 .mailEmne{
   width: 100vw;
+}
+.kurvbtn{
+  font-size: 3vw;
+  padding-top: 0.5vh;
 }
  /*------------SSUC1--------------*/
  .ssuctop{
@@ -2255,7 +2447,7 @@ Link{
  }
  #ssucH{
   width: 100vw;
-  height: 60vh;
+  height: fit-content;
 
  }
  #texBtn p{
@@ -2266,8 +2458,9 @@ Link{
 
  }
  #vertikalP .Lodretvenstre{
-  margin-top: 38vh;
+  margin-top: 35vh;
   font-size: 5vw;
+  padding-top: 2vh;
  }
  #vertikalP{
   width: 45vw;
@@ -2286,6 +2479,7 @@ Link{
  #MCImg{
   width: 40vw;
  }
+ 
  .ssuucHeight{
   height: fit-content;
  }
@@ -2311,6 +2505,7 @@ Link{
     width: 90vw;
     height: auto;
     margin-left: 10vw;
+    margin-bottom: 5vh;
   }
   #ssuc3PicCirkel{
     margin-left: 0vw;
@@ -2336,6 +2531,11 @@ Link{
   .ssuc3Knap{
     padding-left: 8vw;
     padding-right: 8vw;
+    margin-left: 25vw;
+  }
+  .OBssuc3text{
+    padding-top: 13vh;
+    padding-bottom: 15vh;
   }
   /*---------loginPage----------*/
   #loginPage{
@@ -2354,6 +2554,30 @@ Link{
     margin-top: 10vh;
     border-left: none;
     border-right: none;
+  }
+  /*--------OB1-------------------*/
+  #OBramme{
+    flex-direction: column-reverse;
+  }
+  #OBimg{
+    width: 80vw;
+    border-top-left-radius: 40vw;
+    border-top-right-radius: 40vw;
+    margin-bottom: 18vh;
+  }
+  .borderL{
+    border-left: none;
+    border-bottom: #707070 1px solid;
+  }
+  #Obh2{
+    margin-top: 10vh;
+  }
+  #Obhp{
+    width: 80vw;
+    margin-bottom: 10vh;
+  }
+  .heightFit{
+    height: fit-content;
   }
   /*------------FOOTER----------------------*/
   #footer{
@@ -2384,7 +2608,8 @@ Link{
   /*-------------Pages--------------*/
   /*--------forside------------*/
   .knapDiv3{
-    height: 5vh;
+    height: 7vh;
+   
   }
   .knapKasse{
     padding-top: 1vh;
@@ -2392,6 +2617,7 @@ Link{
   .OvalKnap{
     width: 27vw;
     border-radius: 4vw;
+    margin-top: 1vh;
   }
 
 
@@ -2473,6 +2699,7 @@ Link{
   }
   .strImg{
     width: 75vw;
+    height: 60vh;
     margin-left: -35vw;
   }
   .StrTxt p{
@@ -2513,6 +2740,7 @@ Link{
     border-radius: 40vw;
     margin-left: 10vw;
     margin-top: 5vh;
+    margin-bottom: 10vh;
   }
   #måledukke{
     width: 70%;
@@ -2584,31 +2812,49 @@ Link{
   #faqDiv{
     flex-direction: column-reverse;
   }
-  #faqDiv h1{
+  .faqDivH1{
     font-size: 30vw;
+  }
+  .betingleseh2{
+    font-size: 4vw;
+    width: 70vw;
+    margin-left: 10vw;
+    padding-bottom: 2vh;
+
   }
   #faqDiv img{
     width: 70vw;
     height: 60vh;
   }
   .faqCirkel{
-    width: 10vw;
-    height: 10vw;
-    border-radius: 5vw;
-    margin-top: 6vh;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 7.5vw;
+    margin-top: 2vh;
     font-size: 8vw;
     margin-left: 2vw;
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #faqTxt{
     width: 100%;
   }
+  
   .question p{
     width: 70vw;
-    padding-left: 5vw;
+    margin-left: 10vw;
     padding-bottom: 2vh;
+    margin-top: 2vh;
   }
   .answer{
     padding-left: 20vw;
+  }
+  .betingelsesH1{
+    font-size: 15vw;
+    margin-left: -2vw;
+    margin-top: 4vh;
   }
   /*---------vintage--------*/
   #filtreÅben{
@@ -2643,5 +2889,34 @@ Link{
   }
   #filterVenstre{
     margin-right: 20vw;
+  }
+  .kropsBtn{
+    width: 50vw;
+  }
+  /*--------Min Side------------*/
+  #minside h1{
+    font-size: 20vw;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+  }
+  #minside{
+    width: 100vw;
+    margin-left: 0vw;
+  }
+  #minside p{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-bottom: 8vh;
+  }
+  #minForm{
+    border-left: none;
+    border-right: none;
+  }
+  .minformFlex label{
+    width: 32vw;
+  }
+  .minBtn{
+    padding-left: 15vw;
+    padding-right: 15vw;
   }
 }

@@ -1,7 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import { useKurv } from '../components/KurvContext';
+
 
 export const SSUC1 = ({product}) => {
+  const location = useLocation();
+    const { addToKurv } = useKurv();
+
+  const handleVidere = () => {
+    // Brug addToKurv fra useKurv
+    addToKurv({
+        billede: product.billede1,
+        overskrift: product.overskrift,
+        pris: product.pris,
+        id: product.id, // Sørg for at inkludere id, hvis du skal fjerne produktet senere
+    });
+};
+if (!product) {
+  return (
+      <div>
+          <p>Produktdata er ikke tilgængelig. Gå tilbage til <Link to="/vintage">Vintage-siden</Link>.</p>
+      </div>
+  );
+}
     
 
   return (
@@ -24,7 +45,7 @@ export const SSUC1 = ({product}) => {
           <p>{product.text}</p>
           <div className='knapDiv3'>
   
-              <Link to="/kontakt" className='OvalKnap'>Kontakt</Link>
+              <Link to="/kontakt" className='OvalKnap' onClick={handleVidere}>Kontakt</Link>
             
           </div>
         </div>

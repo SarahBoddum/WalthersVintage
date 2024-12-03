@@ -23,6 +23,7 @@ import Login from './components/Login';
 import { AuthProvider } from "./components/AuthContext";
 import ProtectedRoute from './components/ProtectedRoute'; // Importer ProtectedRoute korrekt
 import MinSide from './pages/Minside';
+import Betingelser from './pages/Betingelser';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null); // Holder auth-status
@@ -58,6 +59,7 @@ function App() {
           <Route path="/baredygtig" element={<BaredygtigPage />} />
           <Route path="/kurv" element={<KurvPage />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/betingelser" element={<Betingelser />} />
           <Route path="/VintageProdukt" element={<VintageProdukt />} />
           
           {/* Beskyttede ruter */}
