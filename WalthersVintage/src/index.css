@@ -87,6 +87,10 @@ input{
   padding-left: 2vw;
   width: 100%;
 }
+.centerH2{
+  text-align: center;
+  margin-top: 2vh;
+}
 body{
   background-color: #EFEBE7;
 
@@ -1378,7 +1382,7 @@ Link{
   object-fit: cover;
 }
 .carousel-image:hover{
-  filter: sepia(30%);
+  filter:brightness(110%)
 }
 /*---------------Størrelsesguide-----------*/
 .StrTxtPic{
@@ -1732,10 +1736,23 @@ Link{
   display: flex;
   padding-top: 70px;
 }
+#faqDivFit{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  padding-top: 70px;
+}
+
 #faqDiv img{
   width: 36vw;
   height: 95vh;
   object-fit: cover;
+}
+#faqImgFit{
+  width: 36vw;
+  height: 95vh;
+  object-fit: cover;
+  position: sticky;
 }
 #faqDiv h1{
   padding-left: 10vw;
@@ -1759,6 +1776,12 @@ Link{
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
+.questionFit{
+  display: flex;
+  border-top: #707070 1px solid;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
 
 .faqCirkel{
   width: 5vw;
@@ -1771,7 +1794,17 @@ Link{
   margin-left: 1vw;
   margin-right: 1vw;
 }
-
+.faqCirkelFit{
+  width: 3vw;
+  height: 3vw;
+  border-radius: 1.5vw;
+  border: #707070 1px solid;
+  text-align: center;
+  font-family: "regulator-nova", sans-serif;
+  font-size: 2.5vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
 .question p{
   width: 55vw;
   padding-top: 1.5vh;
@@ -1784,11 +1817,85 @@ Link{
   padding-right: 5vw;
   padding-bottom: 2vh;
 }
-
-.answer.show {
-  max-height: 500px; /* Eller et passende max-height */
+#fitImgDiv{
+  width: 36vw;
+  height: 95vh;
+  border-left: #707070 1px solid;
+  border-top: #707070 1px solid;
+  position: sticky;
 }
-
+.faqImgFit{
+  width: 70%;
+  margin-top: 5vh;
+  margin-left: 15%;
+}
+.answer.show {
+  max-height: fit-content; /* Eller et passende max-height */
+}
+#ekstraMålflex{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin-top: 10vh;
+  border-top: #707070 1px solid;
+  border-bottom: #707070 1px solid;
+}
+#EMdukkeBox{
+  width: 30%;
+  border-right: #707070 1px solid;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EMDbaggrund{
+  width: 20vw;
+  height: fit-content;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 10vw;
+  border-top-right-radius: 10vw;
+  border-bottom-left-radius: 10vw;
+  border-bottom-right-radius: 10vw;
+  border: #707070 1px solid;
+}
+#ekstraMåldukke{
+  width: 55%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+#EMtext{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#EMtextp{
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.EMtextFlex{
+  width: 100%;
+  display: flex;
+  border-top: #707070 1px solid;
+  height: 12vh;
+}
+.EMmålh2{
+  width: 30%;
+  border-right: #707070 1px solid;
+  padding-top: 2vh;
+  padding-left: 2vw;
+}
+.EMmålp{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  padding-top: 2vh;
+  padding-bottom: 5vh;
+}
 @media only screen and (max-width: 1000px){
   .mobil{
       display: block;
@@ -1890,7 +1997,7 @@ Link{
   #Mlogo{
       width: 50%;
       margin-left: 25%;
-      margin-top: -10vh;
+      margin-top: -5vh;
   }
   #logolink{
     display: none;
@@ -2620,17 +2727,10 @@ Link{
     margin-top: 1vh;
   }
 
-
-  .carousel-container {
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
-    align-items: center;
-  }
+  
   
   .carousel-content {
     display: flex;
-    align-items: center;
     position: relative;
     width: 100%;
   }
@@ -2642,13 +2742,12 @@ Link{
     gap: 20vw;
     margin-left: 10VW;
   }
-  
-  .carousel-image {
-    width: 80vw;
-    flex-shrink: 0;
-    height: auto;
+  #detaljeImgRammeForside{
+    width: 73vw;
+    height: 55vh;
+    margin-right: 15vw;
   }
-  
+ 
   .arrow {
     cursor: pointer;
     width: 6vw;
@@ -2705,6 +2804,9 @@ Link{
   .StrTxt p{
     width: 80vw;
     padding-bottom: 10vh;
+  }
+  .MarginBtn{
+    font-size: 4vw;
   }
   #målskema{
     flex-direction: column;
@@ -2785,9 +2887,11 @@ Link{
   }
   #FDbaggrund{
     width: 80vw;
+    height: fit-content;
     border-radius: 40vw;
     padding-left: 15vw;
     padding-top: 6vh;
+    padding-bottom: 10vh;
   }
   #Fdukke{
     width: 50vw;
@@ -2812,8 +2916,14 @@ Link{
   #faqDiv{
     flex-direction: column-reverse;
   }
+  #faqDivFit{
+    flex-direction: column-reverse;
+  }
   .faqDivH1{
     font-size: 30vw;
+  }
+  #fitImgDiv{
+    display: none;
   }
   .betingleseh2{
     font-size: 4vw;
@@ -2825,6 +2935,10 @@ Link{
   #faqDiv img{
     width: 70vw;
     height: 60vh;
+  }
+
+  #faqImgFit{
+    display: none;
   }
   .faqCirkel{
     width: 15vw;
@@ -2838,6 +2952,15 @@ Link{
     justify-content: center;
     align-items: center;
   }
+  .faqCirkelFit{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 5vw;
+    font-size: 8vw;
+  }
+  .questionFit{
+    height: 6vh;
+  }
   #faqTxt{
     width: 100%;
   }
@@ -2849,12 +2972,66 @@ Link{
     margin-top: 2vh;
   }
   .answer{
-    padding-left: 20vw;
+    padding-left: 27vw;
   }
   .betingelsesH1{
     font-size: 15vw;
     margin-left: -2vw;
     margin-top: 4vh;
+  }
+  .faqImgFit{
+    width: 40vw;
+    margin-left: 3vw;
+    margin-top: 2vh;
+
+  }
+  #ekstraMålflex{
+    flex-direction: column;
+    height: fit-content;
+    border-top: none;
+  }
+  #EMtext{
+    width: 100%;
+  }
+  #EMtextp{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0;
+  }
+  #EMdukkeBox{
+    width: 100%;
+    border-right: none;
+    border-top: #707070 1px solid;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  #ekstraMåldukke{
+    width: 50%;
+  }
+  .EMtextFlex{
+    flex-direction: column;
+    height: fit-content;
+  }
+  .EMmålh2{
+    width: 100%;
+    border-right: none;
+    padding-top: 5vh;
+    text-align: center;
+  }
+  .EMmålp{
+    width: 80%;
+  }
+  .EMDbaggrundmobil{
+    height: fit-content;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    border: #707070 1px solid;
+    width: 50vw;
+    border-top-left-radius: 25vw;
+    border-top-right-radius: 25vw;
+    border-bottom-left-radius: 25vw;
+    border-bottom-right-radius: 25vw;
   }
   /*---------vintage--------*/
   #filtreÅben{

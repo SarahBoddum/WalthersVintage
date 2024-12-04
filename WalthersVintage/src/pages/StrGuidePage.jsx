@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import faqimg from '../assets/Images/størresler.webp';
 import dukke from '../assets/Images/måledukke3.svg';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
-import Bjaelke from '../components/Bjaelke';
+import måledukke2 from '../assets/Images/måledukke2.svg';
+import Fit from '../components/Fit';
 
 export const Størrelsesguide = () => {
   const [openSection, setOpenSection] = useState(null); // Holder styr på den aktive sektion
@@ -91,7 +91,7 @@ export const Størrelsesguide = () => {
             </div>
           </div>
           <div id='måleBaggrund'>
-            <img id='måledukke' src={dukke} alt='Illustration af hvor på kroppen du skal tage mål' />
+            <img id='måledukke' src={dukke} alt='Illustration af hvor på kroppen du skal tage mål' loading="lazy"/>
           </div>
         </div>
       )}
@@ -99,20 +99,54 @@ export const Størrelsesguide = () => {
       {/* Ekstra mål */}
       {openSection === 'ekstraMålDiv' && (
         <div id='ekstraMålDiv'>
-          <Bjaelke>
-            <h2>ekstra mål :</h2>
-          </Bjaelke>
-          <p>Her kan du finde ekstra mål for forskellige designs.</p>
+          <h2 className='centerH2'>ekstra mål :</h2>
+          <div id='ekstraMålflex'>
+            <div id='EMdukkeBox' className='laptop'>
+              <div className='EMDbaggrund laptop'>
+                <img id='ekstraMåldukke'  className='laptop' src={måledukke2} alt='måledukke med optegning af flere målsteder' loading="lazy"/>
+              </div>
+            </div>
+            <div id='EMtext'>
+              <p id='EMtextp'>Udover de mål, jeg bruger til at vurdere en størrelse, er der flere andre relevante mål, du skal kende, så du bedst muligt kan vurdere om det passer dig. 
+                  <br /><br />
+                  Her er dem, jeg bruger til mine produkter 
+              </p>
+              <div id='EMdukkeBox' className='mobil'>
+                <div className='EMDbaggrundmobil'>
+                  <img id='ekstraMåldukke'  className='mobil' src={måledukke2} alt='måledukke med optegning af flere målsteder' loading="lazy"/>
+                </div>              
+              </div>
+              <div>
+                <div className='EMtextFlex'>
+                    <h2 className='EMmålh2'>SKULDERBREDDE</h2>
+                    <p className='EMmålp'>Måles fra skulderspids til skulderspids på ryggen. Målet bruges både til at bestemme fittet  og størrelsen</p>
+                </div>
+
+                <div className='EMtextFlex'>
+                    <h2 className='EMmålh2'>SKRIDT TIL ANKEL</h2>
+                    <p className='EMmålp'>Måles fra skridtet til ankel og bruges til at bestemme om længden på bukserne passer til din krop</p>
+                </div>
+
+                <div className='EMtextFlex'>
+                    <h2 className='EMmålh2'>HØJDE</h2>
+                    <p className='EMmålp'>Din fulde højde i cm. Den skal jeg bruge, når du bestiller et specialsyet produkt for at udregne dine øvrigt mål</p>
+                </div>
+
+                <div className='EMtextFlex'>
+                    <h2 className='EMmålh2'>LÆNGDE</h2>
+                    <p className='EMmålp'>Den relevante længde på en style - fx længden på nederdelen, jakken fra skuldrens højeste punkt til sømkanten</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
 
       {/* Fit guide */}
       {openSection === 'fitDiv' && (
         <div id='fitDiv'>
-          <Bjaelke>
-            <h2>fit guide :</h2>
-          </Bjaelke>
-          <p>Her kan du læse om, hvordan tøjet er designet til at passe.</p>
+          <h2 className='centerH2'>fitguide :</h2>
+          <Fit></Fit>
         </div>
       )}
 
