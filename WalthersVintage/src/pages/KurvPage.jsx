@@ -1,6 +1,6 @@
 import React from 'react';
 import KurvKontakt from '../components/Kurvkontakt';
-import kontaktimg from '../assets/Images/Kontaktlisbeth.jpg';
+import kontaktimg from '../assets/Images/Kurvimg.jpg';
 import Footer from '../components/Footer';
 
 

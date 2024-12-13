@@ -5,12 +5,13 @@ import Bjaelke from '../components/Bjaelke';
 import pilVenstre from '../assets/Images/pilV.png';
 import pilHøjre from '../assets/Images/pilH.png';
 import BeigeTxtPic from '../components/BeigeTxtPic';
-import Lis1 from '../assets/Images/LisbethLanding.jpg';
+import Lis1 from '../assets/Images/placeholder1.jpg';
 import Testimonial from '../components/Testimonial';
 import testiPic from '../assets/Images/Qhvid2-lys.jpg';
 import { getDoc, doc } from 'firebase/firestore';
 import { db } from '../Data/firebase';
 import Footer from '../components/Footer';
+import { useSwipeable } from 'react-swipeable';
 
 export const Forside = () => {
   const [carouselImages, setCarouselImages] = useState([]); // State til billeder
@@ -20,7 +21,7 @@ export const Forside = () => {
     const fetchImages = async () => {
       try {
         // Hent specifikke dokumenter fra Firestore
-        const docIds = ['vintage-4', 'vintage-3', 'vintage-7'];
+        const docIds = ['vintage-004', 'vintage-003', 'vintage-007'];
         const promises = docIds.map((id) =>
           getDoc(doc(db, 'Vintage', id)).then((snapshot) => ({
             src: snapshot.data()?.billede || '', // Brug feltet 'billede'
@@ -48,6 +49,14 @@ export const Forside = () => {
     setCurrentIndex(currentIndex === carouselImages.length - 1 ? 0 : currentIndex + 1);
   };
 
+    // Swipe-håndtering
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: goToNext,
+    onSwipedRight: goToPrevious,
+    preventScrollOnSwipe: true,
+    trackMouse: true,
+  });
+
   return (
     <div>
       <KompEt />
@@ -74,6 +83,7 @@ export const Forside = () => {
             alt="Previous"
             className="arrow left mobil"
             onClick={goToPrevious}
+            loading="lazy"
           />
           <div
             className="image-container laptop"
@@ -81,16 +91,16 @@ export const Forside = () => {
           >
             {carouselImages.map((image, index) => (
               <Link to={image.path} key={index} className='laptop'>
-                <img src={image.src} alt={`Slide ${index + 1}`} className="carousel-image laptop" />
+                <img src={image.src} alt={`Slide ${index + 1}`} className="carousel-image laptop"  loading="lazy"/>
               </Link>
             ))}
           </div>
           <div id="detaljeImgRammeForside" className='mobil'>
-            <div className="produkt-carousel-wrapper forsidewrap">
-              <div className="produkt-carousel-content" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            <div className="produkt-carousel-wrapper forsidewrap" {...swipeHandlers}>
+              <div className="produkt-carousel-content forsideCC" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                 {carouselImages.map((image, index) => (
                   <Link to={image.path} key={index} className="produkt-carousel-frame forsideFrame">
-                    <img src={image.src} alt={`Slide ${index + 1}`} className="produkt-carousel-image ForsideKImg" />
+                    <img src={image.src} alt={`Slide ${index + 1}`} className="produkt-carousel-image ForsideKImg" loading="lazy" />
                   </Link>
                 ))}
               </div>
@@ -101,6 +111,7 @@ export const Forside = () => {
             alt="Next"
             className="arrow right mobil"
             onClick={goToNext}
+            loading="lazy"
           />
         </div>
 

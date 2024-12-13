@@ -9,13 +9,13 @@ export const Unika = (props) => {
     <div id='unikaTop'>
         <h1 className='mobil'>{UnikaH1}</h1>
         <div id='PicCirkelramme'>
-            <img src={UnikaTopStort} id='UTStorImg' alt={UTstortAlt}/>
+            <img src={UnikaTopStort} id='UTStorImg' alt={UTstortAlt} loading="lazy"/>
             <div id='unikaTopCirkel'>{cirkelQuote}</div>
         </div>
         <div id='unkaTxtPic'>
             <h1 className='laptop'>{UnikaH1}</h1>
             <div id='UnikaTxtBox'>
-                <img src={UnikaTopLille} id='UTlilleImg' alt={UTlilleAlt}/>
+                <img src={UnikaTopLille} id='UTlilleImg' alt={UTlilleAlt} loading="lazy"/>
                 <div id='unikaTxtBtn'>
                     {unikaTxt}
                     <Link className='OvalKnap unikaBtn' to="/Kontakt">Kontakt</Link>

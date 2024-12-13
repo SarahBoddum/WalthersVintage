@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import faqImg from '../assets/Images/FAQwv.jpg';
+import faqImg from '../assets/Images/Betingelser.jpg';
 import Footer from '../components/Footer';
 
 export const Betingelser = () => {
@@ -46,7 +46,7 @@ export const Betingelser = () => {
             ))}
           </div>
         </div>
-        <img src={faqImg} id='faqImg' alt='Mig og mit tøj' />
+        <img src={faqImg} id='faqImg' alt='Mig og mit tøj' loading="lazy" />
         <h1 className='betingelsesH1 mobil'>betingelser</h1>
       </div>
       <Footer></Footer>

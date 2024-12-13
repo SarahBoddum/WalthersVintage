@@ -29,11 +29,11 @@ if (!product) {
     <div className='ssuctop'>
       <div id='ssucV'>
         <h2 className='ssucTitel mobil'>{product.overskrift}</h2>
-        <img src={product.billede1} alt={product.alt} id='SS1Img1'/>
+        <img src={product.billede1} alt={product.alt} id='SS1Img1' loading="lazy"/>
         <h2 id='status'>{product.status}</h2>
         <div id='billedText'>
           <h2 className='laptop'>{product.overskrift}</h2>
-          <img src={product.billede2} alt={product.alt} id='SSImg2'/>
+          <img src={product.billede2} alt={product.alt} id='SSImg2' loading="lazy"/>
           <p>Pris<br />1200</p>
         </div>
       </div>

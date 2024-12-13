@@ -13,8 +13,8 @@ import { useSwipeable } from 'react-swipeable';
 const ProduktDetaljer = () => {
     const location = useLocation();
     const { product } = location.state || {}; 
-    const { addToKurv, removeFromKurv, isProductInKurv } = useKurv();
-
+    const { addToKurv } = useKurv(); // Brug addToKurv fra context
+    
     const [anbefalinger, setAnbefalinger] = useState([null, null, null]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showMål, setShowMål] = useState(false);
@@ -23,7 +23,7 @@ const ProduktDetaljer = () => {
     // Hent data til anbefalede produkter
     useEffect(() => {
         const fetchAnbefalinger = async () => {
-            if (!product) return;
+            if (!product) return; // Hvis der ikke er noget produkt, hent ikke anbefalinger
 
             try {
                 const querySnapshot = await getDocs(collection(db, 'Vintage'));
@@ -32,6 +32,7 @@ const ProduktDetaljer = () => {
                     ...doc.data(),
                 }));
 
+                // Find anbefalinger baseret på ID'er
                 const anbefalingerData = [
                     product.anbefaling1,
                     product.anbefaling2,
@@ -55,18 +56,21 @@ const ProduktDetaljer = () => {
         product?.karrusel3,
     ].filter(Boolean);
 
+    // Funktioner til karrusellen
     const handleNext = () => setCurrentIndex((prevIndex) => (prevIndex + 1) % billeder.length);
     const handlePrev = () => setCurrentIndex((prevIndex) =>
         prevIndex === 0 ? billeder.length - 1 : prevIndex - 1
     );
 
-    const swipeHandlers = useSwipeable({
+      // Swipe-håndtering
+      const swipeHandlers = useSwipeable({
         onSwipedLeft: handleNext,
         onSwipedRight: handlePrev,
         preventScrollOnSwipe: true,
-        trackMouse: true,
+        trackMouse: true, // Tillad museswipe til desktop
     });
 
+    // Toggle-funktioner
     const toggleMål = () => {
         setShowMål(!showMål);
         if (!showMål) setShowMaterialer(false);
@@ -77,18 +81,14 @@ const ProduktDetaljer = () => {
         if (!showMaterialer) setShowMål(false);
     };
 
-    // Håndter "Læg i kurv" og "Fjern fra kurv"
-    const toggleKurv = () => {
-        if (isProductInKurv(product.id)) {
-            removeFromKurv(product.id);
-        } else {
-            addToKurv({
-                billede: product.billede,
-                overskrift: product.overskrift,
-                pris: product.pris,
-                id: product.id,
-            });
-        }
+    const handleVidere = () => {
+        // Brug addToKurv fra useKurv
+        addToKurv({
+            billede: product.billede,
+            overskrift: product.overskrift,
+            pris: product.pris,
+            id: product.id, // Sørg for at inkludere id, hvis du skal fjerne produktet senere
+        });
     };
 
     if (!product) {
@@ -110,6 +110,7 @@ const ProduktDetaljer = () => {
                         <p>Tilbage</p>
                     </Link>
 
+                    {/* Produkt karrusel */}
                     <div id="produktCarousel" {...swipeHandlers}>
                         <div id="detaljeFlex">
                             <div id="detaljeImgRamme">
@@ -144,8 +145,8 @@ const ProduktDetaljer = () => {
                     </div>
 
                     <div className="knapDiv3 detaljeKD">
-                        <div className="OvalKnap Detaljeknap" onClick={toggleKurv}>
-                            {isProductInKurv(product.id) ? "Fjern" : "Læg i kurv"}
+                        <div className="OvalKnap Detaljeknap" onClick={handleVidere}>
+                            Læg i kurv
                         </div>
                         <Link className="OvalKnap Detaljeknap" to="/kurv">Gå til kurv</Link>
                     </div>
@@ -185,7 +186,7 @@ const ProduktDetaljer = () => {
                         <div id='EstStr'><h2>estimeret størrelse: {product.størrelse}</h2></div>
                     </div>
                     <div className='Detaljer-VH'>
-                        <p id='målP'>OBS!<br /> Alle produktets mål er fratrukket rørlig vidde - de mål, der står oplyst er altså de mål, DIN krop skal have for at passe produktet. Hvis du vil vide mere så læs <span id='strLink'><Link to="/strguide">her</Link></span>.
+                        <p id='målP'>Du opnår det bedste fit ved at måle din egen krop ved bryst, talje og hofte. Se hvordan <span id='strLink'><Link to="/strguide">her</Link></span>.
                             <br />Alle størrelser er vejledende.
                             <br /><br />
                             Er du i tvivl, må du altid skrive til mig, så hjælper jeg dig gerne
@@ -214,7 +215,7 @@ const ProduktDetaljer = () => {
                 {anbefalinger.map((anbefaling, idx) =>
                     anbefaling ? (
                     <DProduktkort key={idx} product={anbefaling} />
-                    ) : null
+                    ) : null // Returnér ingenting for tomme anbefalinger
                 )}
             </div>
 

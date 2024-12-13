@@ -10,13 +10,14 @@ export const UCproduktkort = ({product}) => {
         <h3>{product.overskrift}</h3>
         <div id='produktStreg'></div>
         <Link to={`/produkt/uc/${product.id}`} state={{ product }}>
-          <img id='produktbillede' src={product.billede} alt={product.alt}/>
+          <img id='produktbillede' src={product.billede} alt={product.alt} loading="lazy"/>
         </Link>
-        <p>{product.pris}</p>
+        <p>Pris {product.pris} kr.</p>
         <Link to={`/produkt/uc/${product.id}`} state={{ product }}>
           <button type='button' id='produktBtn'>Læs mere</button>
         </Link>
     </div>
+
   )
 }
 export default UCproduktkort;

@@ -132,7 +132,7 @@ export const VintageProdukt = () => {
     <div>
       <div id='filtreÅben'>
         <Link id='filterVenstre' to="/vintage">
-          <img src={pilVenstre} alt='pil til venstre ikon' className='filterpil'/>
+          <img src={pilVenstre} alt='pil til venstre ikon' className='filterpil' loading="lazy"/>
           <p>Tilbage</p>
         </Link>
         <h2 id='linkH2' onClick={toggleFilter}>{isFilterOpen ? "Luk filtre" : "Åbn filtre"}</h2>
@@ -142,7 +142,7 @@ export const VintageProdukt = () => {
       <div id='filterfunktion' className={isFilterOpen ? '' : 'collapsed'}>
         <Link id='filterTilbage' to="/strguide">
           <p>Størrelsesguide</p>
-          <img src={pilHøjre} className='filterpil' alt='pil mod højre ikon' />
+          <img src={pilHøjre} className='filterpil' alt='pil mod højre ikon' loading="lazy" />
         </Link>
         <div id='målOgDukke'>
           <div id='filterMål'>
@@ -235,7 +235,7 @@ export const VintageProdukt = () => {
 
           <div id='filterDukke'>
             <div id='FDbaggrund'>
-              <img src={filterdukke} id='Fdukke' alt='illustration af opmåling af kropsmål' />
+              <img src={filterdukke} id='Fdukke' alt='illustration af opmåling af kropsmål' loading="lazy" />
             </div>
           </div>
         </div>

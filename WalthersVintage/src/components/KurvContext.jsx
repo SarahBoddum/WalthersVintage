@@ -17,8 +17,13 @@ export const KurvProvider = ({ children }) => {
         setKurvData((prevKurv) => prevKurv.filter((produkt) => produkt.id !== produktId));
     };
 
+    // Tjek om produkt er i kurv
+    const isProductInKurv = (productId) => {
+        return kurvData.some((item) => item.id === productId); // Brug `kurvData` korrekt
+    };
+
     return (
-        <KurvContext.Provider value={{ kurvData, addToKurv, removeFromKurv }}>
+        <KurvContext.Provider value={{ kurvData, addToKurv, removeFromKurv, isProductInKurv }}>
             {children}
         </KurvContext.Provider>
     );

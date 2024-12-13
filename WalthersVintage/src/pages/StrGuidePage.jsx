@@ -27,7 +27,7 @@ export const Størrelsesguide = () => {
             Her kan du læse om målene for mine grundstørrelser, ekstra mål og fit guide.
           </p>
         </div>
-        <img className='strImg laptop' src={faqimg} alt='Mig med mine konstruktionsredskaber' />
+        <img className='strImg laptop' src={faqimg} alt='Mig med mine konstruktionsredskaber' loading="lazy" />
       </div>
 
       <div className='knapDiv3'>
@@ -35,7 +35,7 @@ export const Størrelsesguide = () => {
           <button type='button' className="OvalKnap MarginBtn" onClick={() => toggleSection('målskema')}>Grundmål</button>
         </div>
         <div className='knapKasse KnapMidt'>
-          <button type='button' className="OvalKnap MarginBtn" onClick={() => toggleSection('ekstraMålDiv')}>Ekstra mål</button>
+          <button type='button' className="OvalKnap MarginBtn" onClick={() => toggleSection('ekstraMålDiv')}>Ekstramål</button>
         </div>
         <div className='knapKasse'>
           <button type='button' className="OvalKnap MarginBtn" onClick={() => toggleSection('fitDiv')}>Fit guide</button>

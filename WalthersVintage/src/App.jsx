@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './Data/Firebase'; // Justér stien til din Firebase-konfiguration
 import ScrollToTop from './components/ScrollToTop';
@@ -38,14 +38,14 @@ function App() {
 
   return (
     <>
+      <AuthProvider>
+      <KurvProvider>
       <ScrollToTop />
       <Navigation />
       <Helmet>
         <title>Walthers Vintage</title>
         <link rel="icon" type="image/png" href="HeadWV.svg" />
       </Helmet>
-      <AuthProvider>
-      <KurvProvider>
         <Routes>
           {/* Offentlige ruter */}
           <Route path="/" element={<ForsidePage />} />

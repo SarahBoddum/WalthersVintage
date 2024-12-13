@@ -66,7 +66,7 @@ const LoginPage = () => {
                 />
                 <div id="loginbtndiv">
                     <div className="loginbtn borderR">
-                        <button className='OvalKnap' type="submit">{isLogin ? "Login" : "Opret Konto"}</button>
+                        <button className='OvalKnap LoginBtn' type="submit">{isLogin ? "Login" : "Opret Konto"}</button>
                     </div>
                     <div className="loginbtn">
                         <button
@@ -79,7 +79,7 @@ const LoginPage = () => {
                 </div>
             </form>
             
-            {currentUser && <button onClick={handleLogout}>Log ud</button>}
+            {currentUser && <button type="button" onClick={handleLogout}>Log ud</button>}
         </div>
     );
 };

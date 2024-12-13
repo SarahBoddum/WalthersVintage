@@ -4,7 +4,7 @@ export const Unika1 = ({ product }) => {
   return (
     <div className='unika1'>
       <div className='Unika-VH borderR'>
-        <img className='unikaImg' src={product.billede} alt={product.alt} />
+        <img className='unikaImg' src={product.billede} alt={product.alt} loading="lazy" />
         <h2 id='HihglightH2'>{product.overskrift}</h2>
       </div>
       <div className='Unika-VH'>

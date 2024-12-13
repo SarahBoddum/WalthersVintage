@@ -71,14 +71,14 @@ export const Fit = () => {
 
                                 <div className={`answer ${visibleAnswerIndex === index ? 'show' : ''}`}>
                                     {visibleAnswerIndex === index && <p>{answers[index]}</p>}
-                                    <img src={currentImage} className='faqImgFit mobil' alt='Billede der relaterer til spørgsmål' />
+                                    <img src={currentImage} className='faqImgFit mobil' alt='Billede der relaterer til spørgsmål' loading="lazy"/>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
                 <div id='fitImgDiv'>
-                    <img src={currentImage} className='faqImgFit laptop' alt='Billede der relaterer til spørgsmål' />
+                    <img src={currentImage} className='faqImgFit laptop' alt='Billede der relaterer til spørgsmål' loading="lazy"/>
                 </div>
             </div>
         </div>

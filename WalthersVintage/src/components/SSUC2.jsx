@@ -13,7 +13,7 @@ export const SSUC2 = ({product}) => {
                 </div>
                 <div className='TextMidt ssuc2Text'>
                     <p>{product.text}</p>
-                    <img src={product.billede1} alt={product.alt} id='MCImg'/> 
+                    <img src={product.billede1} alt={product.alt} id='MCImg' loading="lazy"/> 
                     <h2>{product.status}</h2>
                 </div>
                 <div className='Lodrethøjre ssucVertikal'>
@@ -21,7 +21,7 @@ export const SSUC2 = ({product}) => {
                 </div>  
             </div>
             <div className='OvalPic ssuc1PicPris'>
-                <img src={product.billede2} alt={product.alt} className='OvalImg'/>
+                <img src={product.billede2} alt={product.alt} className='OvalImg' loading="lazy"/>
                 <p>Pris<br />{product.pris}</p>
             </div>
         </div>

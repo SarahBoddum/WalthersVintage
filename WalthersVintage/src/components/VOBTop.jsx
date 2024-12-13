@@ -7,7 +7,7 @@ export const VOBtop = (props) => {
   return (
     <div id='VOBtop'>
         <h1 className={`mobil ${VOBh1Class}`}>{VOBmobilH1}</h1>
-        <img src={VOBimg} alt={VOBalt} id='VOBimg'/>
+        <img src={VOBimg} alt={VOBalt} id='VOBimg' loading="lazy"/>
         <div id='VOBtxt'>
             <h1 className='laptop'>{VOBlaptopH1}</h1>
             <div className='streg'></div>

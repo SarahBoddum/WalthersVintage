@@ -109,12 +109,20 @@ export const KurvKontakt = (props) => {
 
         const orderConfirmationRequestBody = {
             reciverEmail: email,
-            subject: `Ordrebekræftelse fra Lisbeth`,
+            subject: `Autosvar fra Lisbeth`,
             body: `
                 Hej ${name},
-                Tak for din forespørgsel!
-                Her er en oversigt over dine valgte produkter:
-                Vi vender tilbage hurtigst muligt med yderligere information.
+                Tak for din henvendelse, jeg vender tilbage hurtigst muligt med et personligt svar.
+                I tilfælde af at du skulle ønske at returnere dit produkt, skal du gemme denne mail, 
+                da al den information, du skal bruge findes her.
+                Hvis du er i tvivl om handelsebetingelserne hos Walthers Vintage, 
+                så læs min side med informationen på walthersvintage.dk/betingelser.
+                Jeg glæder mig til at hjælpe dig! 
+                
+                Mvh Lisbeth
+                Walthers Vintage
+                Adresse: Skanderborgvej 19, 8680 Ry
+                walthersvintage@outlook.com
             `
         };
 
@@ -165,7 +173,7 @@ export const KurvKontakt = (props) => {
             </div>
         
             <div id='formularImg'>
-                <img src={laptopLisbeth} className='KKimgStor laptop' alt='Lisbeth' />
+                <img src={laptopLisbeth} className='KKimgStor laptop' alt='Lisbeth' loading="lazy"/>
                 
                 {!formSent ? (
                     <div id='kontaktformular'>
@@ -211,16 +219,18 @@ export const KurvKontakt = (props) => {
                                 {kurvData.length > 0 && (
                                     kurvData.map((produkt, index) => (
                                         <div key={index} className="kurv-produkt">
-                                            <img src={produkt.billede} alt={`Produkt ${index + 1}`} />
+                                            <img src={produkt.billede} alt={`Produkt ${index + 1}`}  loading="lazy"/>
                                             <div className='produkttekst'>
                                                 <h2>{produkt.overskrift}</h2>
                                                 <p>Pris: {produkt.pris} DKK</p>
-                                                <button onClick={() => handleFjernProdukt(produkt.id)}>Fjern</button>
+                                                <button className='OvalKnap' onClick={() => handleFjernProdukt(produkt.id)}>Fjern</button>
                                             </div>
                                         </div>
                                     ))
                                 )}
-                                <p className='samlet-pris'>Samlet pris: {kurvData.reduce((total, produkt) => total + parseFloat(produkt.pris), 0).toFixed(2)} DKK</p>
+                                <p className='samlet-pris'>Samlet pris: {kurvData.reduce((total, produkt) => 
+                                total + parseFloat(produkt.pris), 0).toFixed(2)} DKK</p>
+                                
                                 <div className={`kurv-mål ${kurvBlockNone}`}>
                                     <div className='OvalKnap kurvbtn' 
                                         onClick={() => {
@@ -261,7 +271,7 @@ export const KurvKontakt = (props) => {
                             </div>
                         </div>   
                         <div className='KnapDiv3 KKknap'>
-                            <button className='OvalKnap' onClick={handleSend}>Send</button>
+                            <button className='OvalKnap' type="button" onClick={handleSend}>Send</button>
                         </div>
                         {response && <p>{response}</p>}
                         {error && <p>{error}</p>}

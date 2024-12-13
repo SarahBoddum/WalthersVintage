@@ -39,10 +39,12 @@ export const Upcycled = () => {
     <div>
     <Unika
       UnikaH1={<h1>Upcycled</h1>}
+      UTlilleAlt={'I think I like this little life broderi'}
       UnikaTopStort={UCtopStort}
+      UTstortAlt={'Lisbeth i vintage skjorte med forskellige broderede motiver'}
       cirkelQuote={<p>Give<br />Clothes<br />A<br />Second<br />Change</p>}
       UnikaTopLille={UClille}
-      unikaTxt={<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>}>
+      unikaTxt={<p>Jeg elsker at arbejde med mine hænder og broderi er bare en fantastisk måde at lade mine hænder og fantasi få frit løb. Derfor har jeg lavet en lille collection af vintagetøj, jeg har udsmykket med de fineste håndlavede broderier.</p>}>
     </Unika>
 
     <Bjaelke>

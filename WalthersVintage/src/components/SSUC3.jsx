@@ -7,12 +7,12 @@ export const SSUC3 = ({ product, imageClassName = 'ssuc3Pic1' }) => {
       <div id='ssuc3Pics'>
         <h2 className='mobil'>{product.overskrift}</h2>
         {/* Brug prop'en imageClassName til at kontrollere className */}
-        <img src={product.billede1} alt={product.alt} className={imageClassName} />
+        <img src={product.billede1} alt={product.alt} className={imageClassName} loading="lazy" />
         <div id='ssuc3PicCirkel'>
           <h2 className='laptop'>{product.overskrift}</h2>
           <h2 className='Rødtext'>{product.status}</h2>
           <div id='flex'>
-            <img src={product.billede2} alt={product.alt} id='ssuc3Pic2' />
+            <img src={product.billede2} alt={product.alt} id='ssuc3Pic2' loading="lazy" />
             <div id='ssuc3Cirkel'>
               <p>Pris<br />{product.pris}</p>
             </div>

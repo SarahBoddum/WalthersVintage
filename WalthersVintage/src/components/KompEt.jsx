@@ -26,7 +26,7 @@ export const KompEt = () => {
                         <img
                         src={images[currentIndex]}
                         alt={`carousel-image-${currentIndex}`}
-                        className="carousel-image1"
+                        className="carousel-image1" loading="lazy"
                         />
                     </div>
                 </div>

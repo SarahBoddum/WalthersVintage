@@ -11,6 +11,7 @@ import OB1 from '../components/OB1';
 import LisSyr from '../assets/Images/syning1.jpg';
 import Testimonial from '../components/Testimonial';
 import Footer from '../components/Footer';
+import WebShop from '../assets/Images/Webshop.jpg';
 
 export const Baredygtig = () => {
 
@@ -44,6 +45,8 @@ export const Baredygtig = () => {
 
         <OBssuc3
         OBstortbillede={håndDug}
+        OBstortbilledeAlt={'Vintageduge med blomsterbroderier'}
+        OBlillebilledeAlt={'Vintageduge med blomsterbroderier'}
         OBlillebillede={dug}
         OBh2={<h2>GAMLE TEKSTILER <br />- NYT LIV</h2>}
         content={<p>Genbrug er den mest skånsomme måde at forhandle mode på, da man ikke hverken bruger af jordens ressourcer eller tilføjer yderligere forurening i form af CO2. 
@@ -61,7 +64,8 @@ export const Baredygtig = () => {
 
         <Testimonial
             solgtNone="solgtNone"
-            buePic={LisSyr}
+            buePic={WebShop}
+            bueAlt={'Walthers Vintage webshop'}
             TopContent={<h2>WALTHERS WEBSHOP</h2>}
             TestiContent={<p>Den måde min tilstedeværelse som designer påvirker verden omkring mig, ligger mig meget på sinde. Jeg er vant til at tænke over de fysike ressource, jeg bruger, men det at skulle drive en webshop i stedet for en konkret butik er nyt for mig. Derfor har jeg fået hjælp til at lave et site, hvor billeder, tekst og opsætning er lavet, så sitet udleder mindst muligt CO2. På den måde kan mit digitale håndværk få lov til at afspejle mit fysiske håndværk.</p>}>
         </Testimonial>

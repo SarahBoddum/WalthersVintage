@@ -9,7 +9,7 @@ export const Testimonial = (props) => {
     <div className='testiTxtPic'>
         <div className='testiHøjre'>
             <div className='bueramme'>
-                <img src={buePic} className={`buePic ${buetilOval}`} alt={bueAlt}/>
+                <img src={buePic} className={`buePic ${buetilOval}`} alt={bueAlt} loading="lazy"/>
                 <div className={`solgt ${solgtNone}`}><p>{solgt}</p></div>
             </div>
             <h2>{TestiH2}</h2>

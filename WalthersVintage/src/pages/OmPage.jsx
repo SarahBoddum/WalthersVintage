@@ -6,7 +6,7 @@ import OBssuc3 from '../components/OBssuc3';
 import Lis1 from '../assets/Images/portræ1.jpg';
 import walther from '../assets/Images/OmWaltherogfus.jpg';
 import OB1 from '../components/OB1';
-import symaskine from '../assets/Images/symaskine2.jpg';
+import symaskine from '../assets/Images/symaskine.jpg';
 import Testimonial from '../components/Testimonial';
 import hanger from '../assets/Images/Omhanger.jpg';
 import Footer from '../components/Footer';

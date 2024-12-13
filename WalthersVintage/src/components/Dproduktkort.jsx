@@ -9,9 +9,9 @@ export const DProduktkort = ({product}) => {
         <h3>{product.overskrift}</h3>
         <div id='produktStreg'></div>
         <Link to={`/produkt/${product.id}`} state={{ product }}>
-          <img id='dproduktbillede' src={product.billede} alt={product.alt}/>
+          <img id='dproduktbillede' src={product.billede} alt={product.alt}  loading="lazy"/>
         </Link>
-        <p>{product.pris}</p>
+        <p id='Dp'>Pris {product.pris} kr.</p>
         <Link to={`/produkt/${product.id}`} state={{ product }}>
           <button type='button' id='produktBtn'>Læs mere</button>
         </Link>

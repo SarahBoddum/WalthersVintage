@@ -12,7 +12,7 @@ export const OB1 = (props) => {
                 <p id='Obhp'>{OBp}</p>
             </div>
             <div className='Detaljer-VH borderL heightFit'>
-                <img src={obImg} alt={obImgAlt} id='OBimg'/>
+                <img src={obImg} alt={obImgAlt} id='OBimg'  loading="lazy"/>
             </div>
         </div>
         <div id='nudeBjalke'></div>

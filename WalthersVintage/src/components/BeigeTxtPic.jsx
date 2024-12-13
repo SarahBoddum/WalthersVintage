@@ -17,7 +17,7 @@ export const BeigeTxtPic = (props) => {
                 </div>
                 <div className='TextMidt'>
                     {MidtContent}
-                    <img src={MCImg} alt={MCImgAlt} id='MCImg'/>
+                    <img src={MCImg} alt={MCImgAlt} id='MCImg' loading="lazy"/>
                 </div>
                 <div className='Txt2lodret'>
                     <div className='Lodrethøjre'>

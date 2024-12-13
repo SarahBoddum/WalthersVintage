@@ -29,7 +29,9 @@ export const Stitch_Stories = () => {
     <div>
       <Unika
         UnikaH1={<h1>Stitch_Stories</h1>}
+        UTstortAlt={'Lisbeth i quiltet jakke med håndbroderier'}
         UnikaTopStort={SStopStort}
+        UTlilleAlt={'close up af quiltet jakke og Stitch_Storeis nakkemærke'}
         cirkelQuote={<p>Good<br />Things<br />Take<br />Time</p>}
         UnikaTopLille={SSmærke}
         unikaTxt={<p>Stitch_Stories er mit eget mærke og jeg syr og designer alt fra bunden. Jeg elsker den historie og det håndværk, man finder i brugte materialer, som altid er fundamentet for mine styles. Quilt og broderier er en kæmpe del af mig og min æstetik og det fletter jeg altid ind i de materialer, jeg bruger. <br /><br />Hvis et produkt er solgt, syr jeg det altid gerne igen på bestilling.</p>}>
@@ -55,6 +57,22 @@ export const Stitch_Stories = () => {
           ))}
         
         {products.slice(3, 4).map((product) => (
+            <SSUC2 key={product.id} product={product} />
+          ))}
+        {products.slice(4, 5).map((product) => (
+            <SSUC1 key={product.id} product={product} />
+          ))}
+
+      {products.slice(5, 6).map((product) => (
+            <SSUC2 key={product.id} product={product} />
+          ))}
+
+        
+        {products.slice(6, 7).map((product) => (
+            <SSUC3 key={product.id} product={product} />
+          ))}
+        
+        {products.slice(7, 8).map((product) => (
             <SSUC2 key={product.id} product={product} />
           ))}
         
